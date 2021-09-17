@@ -2,27 +2,37 @@ main {
   align-content: center;
   box-sizing: border-box;
   display: grid;
-  font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
-    'Arial', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   hyphens: auto;
-  line-height: 1.65;
+  line-height: 0;
   margin: 0 auto;
-  max-width: 680px;
-  min-height: 100vh;
+  max-width: 90%;
+  min-height: 100%;
   padding: 72px 0;
   text-align: center;
 }
+.background {
+  background-color: #252525;
+  height: 100vh;
+  width: 100%;
+}
+
 h1 {
-  font-size: 45px;
+  font-size: 7em;
+  color: #FFFFFF;
 }
 h2 {
-  margin-top: 1.5em;
+  font-size: 2.5em;
+  color: #FFFFFF;
+  font-weight: lighter;
 }
 p {
   font-size: 16px;
 }
 a {
   border-bottom: 1px solid white;
+  background-color: #252525;
   color: #0076ff;
   cursor: pointer;
   text-decoration: none;
