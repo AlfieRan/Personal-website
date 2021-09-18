@@ -1,14 +1,20 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import './App.css';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="background">
-      <main>
-        <h1>Alfie Ranstead</h1>
-        <h2>Programmer and Student</h2>
-      </main>
+      <Router>
+          <Navbar />
+          <main>
+            <h1>Alfie Ranstead</h1>
+            <h2>Programmer and Student</h2>
+          </main>
+      </Router>
     </div>
   );
 }
