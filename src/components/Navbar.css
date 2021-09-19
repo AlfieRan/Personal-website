@@ -9,13 +9,13 @@
   .menu-bars {
     margin-left: 2rem;
     font-size: 2rem;
-    background: none;
+    background-color: #252525;
   }
   
   .nav-menu {
     background-color: #252525;
     color: #ffffff;
-    width: 250px;
+    width: 25vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -23,15 +23,20 @@
     top: 0;
     left: -100%;
     transition: 850ms;
+    margin-left: -40px;
+    margin-top: -15px;
+    
   }
   
   .nav-menu.active {
     left: 0;
+    width: 100vw;
     transition: 350ms;
   }
   
   .nav-text {
     display: flex;
+    background-color: #252525;
     color: #ffffff;
     justify-content: flex-start;
     align-items: center;
@@ -43,16 +48,18 @@
   .nav-text a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 8vmin;
     width: 95%;
     height: 100%;
     display: flex;
     align-items: center;
     padding: 0 16px;
+    background-color: #252525;
   }
   
   .nav-text a:hover {
     color: #48afeb;
+    background-color: #252525;
   }
   
   .nav-menu-items {
