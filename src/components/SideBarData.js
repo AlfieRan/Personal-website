@@ -11,14 +11,20 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
-        title: 'Reports',
-        path: '/reports',
+        title: 'Contact',
+        path: '/contact',
         icon: <IoIcons.IoIosPaper />,
         cName: 'nav-text'
     },
     {
-        title: 'Products',
-        path: '/products',
+        title: 'Github',
+        path: '/github',
+        icon: <FaIcons.FaCartPlus />,
+        cName: 'nav-text'
+    },
+    {
+        title: 'Youtube',
+        path: '/youtube',
         icon: <FaIcons.FaCartPlus />,
         cName: 'nav-text'
     },
