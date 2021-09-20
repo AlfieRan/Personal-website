@@ -15,15 +15,30 @@ main {
   width: 100%;
 }
 
-h1 {
-  font-size: 7.5vw;
-  color: #FFFFFF;
+@media (max-width: 1199px) {
+  h1 {
+    font-size: 12vw;
+    color: #FFFFFF;
+  }
+  h2 {
+    font-size: 5vw;
+    color: #FFFFFF;
+    font-weight: lighter;    
+  }
 }
-h2 {
-  font-size: 2.5vw;
-  color: #FFFFFF;
-  font-weight: lighter;
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 8vw;
+    color: #FFFFFF;
+  }
+  h2 {
+    font-size: 3vw;
+    color: #FFFFFF;
+    font-weight: lighter;  
+  }  
 }
+
 p {
   font-size: 16px;
 }
