@@ -1,4 +1,5 @@
-.navbar {
+@media (max-width: 1199px) {
+  .navbar {
     background-color: #252525;
     height: 80px;
     display: flex;
@@ -78,3 +79,48 @@
   span {
     margin-left: 16px;
   }
+}
+
+@media (min-width: 1200px)
+{
+  .navbar{
+    display: none;
+  }
+    
+  .menu-bars {
+    display: none;
+  }
+  
+  .nav-menu {
+    display: none;
+    
+  }
+  
+  .nav-menu.active {
+    display: none;
+  }
+  
+  .nav-text {
+    display: none;
+  }
+  
+  .nav-text a {
+    display: none;
+  }
+  
+  .nav-text a:hover {
+    display: none;
+  }
+  
+  .nav-menu-items {
+    display: none;
+  }
+  
+  .navbar-toggle {
+    display: none;
+  }
+  
+  span {
+    display: none;
+  }
+}
