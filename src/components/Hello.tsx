@@ -42,7 +42,7 @@ const Hello = (props: { hidden?: boolean }) => {
       setOpacity,
       setCenterText,
       setLanguageText,
-      0,
+      Math.floor(Math.random() * language_data.length),
       language_data
     );
   }, []);
