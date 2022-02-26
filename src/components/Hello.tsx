@@ -51,7 +51,7 @@ const Hello = (props: { hidden?: boolean }) => {
     return null;
   }
   return (
-    <Box w={"full"} h={"full"} opacity={`${Opacity}%`}>
+    <Box w={"100vw"} h={"100vh"} opacity={`${Opacity}%`}>
       <Box h={"10vh"}></Box>
       <Center h={"80vh"} w={"100vw"}>
         <Text fontSize={"6xl"}>{centerText}</Text>
