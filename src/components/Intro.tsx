@@ -5,16 +5,16 @@ import Name from "./Name";
 import { fadeIn, fadeOut } from "../utils/fader";
 import sleep from "../utils/sleep";
 
-const SwitchTime = 1000;
+const SwitchTime = 500;
 
 async function switchToName(
   setIntroOpacity: Dispatch<SetStateAction<number>>,
   setShow: Dispatch<SetStateAction<{ hello: boolean; name: boolean }>>,
   introController: Dispatch<SetStateAction<boolean>>
 ) {
-  console.log("clicked");
   await fadeOut(SwitchTime, setIntroOpacity);
   setShow({ hello: false, name: true });
+  await sleep(500);
   await fadeIn(SwitchTime, setIntroOpacity);
   await sleep(1000);
   await fadeOut(SwitchTime, setIntroOpacity);
@@ -30,6 +30,7 @@ const Component = (props: {
     name: false,
   });
   const [introOpacity, setIntroOpacity] = useState<number>(100);
+  const [clickAble, setClickAble] = useState<boolean>(true);
 
   if (props.hidden) {
     return null;
@@ -43,9 +44,12 @@ const Component = (props: {
         _hover={{ bg: "inherit" }}
         _active={{ bg: "inherit" }}
         hidden={!show.hello}
-        onClick={(e) =>
-          switchToName(setIntroOpacity, setShow, props.introController)
-        }
+        onClick={(e) => {
+          if (clickAble) {
+            setClickAble(false);
+            switchToName(setIntroOpacity, setShow, props.introController);
+          }
+        }}
       >
         <Hello />
       </Button>

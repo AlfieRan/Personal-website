@@ -20,7 +20,7 @@ const Component = (props: { hidden: boolean }) => {
   }
   return (
     <Center w={"full"} h={"full"} flexDir={"column"}>
-      <Text fontSize={mainTextSize} my={10}>
+      <Text fontSize={mainTextSize} mb={10}>
         Alfie Ranstead
       </Text>
       <Flex fontSize={"3xl"} flexDir={flexDirec} textAlign={"center"}>

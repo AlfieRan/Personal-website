@@ -13,11 +13,11 @@ async function swapText(
   list: { language: string; data: string }[]
 ) {
   await fadeOut(ms, setOpacity);
-  sleep(ms / 10);
+  sleep(ms / 2);
   setText(list[listItem].data);
   setLanguageText(list[listItem].language);
   await fadeIn(ms, setOpacity);
-  sleep(ms / 10);
+  sleep(ms / 2);
 
   swapText(
     ms,
@@ -34,7 +34,7 @@ const Hello = (props: { hidden?: boolean }) => {
   const [centerText, setCenterText] = useState<string>("Hello");
   const [languageText, setLanguageText] = useState<string>("English");
   const [Opacity, setOpacity] = useState<number>(100);
-  const changeTime = 2000;
+  const changeTime = 1000;
 
   useEffect(() => {
     swapText(
