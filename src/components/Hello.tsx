@@ -53,16 +53,15 @@ const Hello = (props: { hidden?: boolean }) => {
   return (
     <Box w={"100vw"} h={"100vh"} opacity={`${Opacity}%`}>
       <Box h={"10vh"}></Box>
-      <Center h={"80vh"} w={"100vw"}>
+      <Center h={"80vh"} w={"100vw"} flexDir={"column"}>
         <Text fontSize={"6xl"}>{centerText}</Text>
+        <Text fontSize={"xl"} textAlign={"right"} p={3}>
+          {languageText}
+        </Text>
       </Center>
-      <Flex h={"10vh"} w={"100vw"}>
-        <Box alignSelf={"flex-end"} w={"100vw"} p={5}>
-          <Text fontSize={"xl"} textAlign={"right"}>
-            {languageText}
-          </Text>
-        </Box>
-      </Flex>
+      <Center h={"10vh"} w={"100vw"}>
+        <Text>Click Anywhere</Text>
+      </Center>
     </Box>
   );
 };
