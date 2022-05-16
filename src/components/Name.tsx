@@ -1,7 +1,8 @@
 import { Center, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import calcDif from "../utils/calcTime";
 
-const Component = (props: { hidden: boolean }) => {
+const Component = (props: { hidden?: boolean }) => {
   const [width, setWidth] = useState(1000);
   const breakpoint = 600;
   const [mainTextSize, setMainTextSize] = useState<"7xl" | "5xl">("7xl");
@@ -17,9 +18,17 @@ const Component = (props: { hidden: boolean }) => {
     return null;
   }
   return (
-    <Center w={"full"} h={"full"}>
-      <Text fontSize={mainTextSize}>Alfie Ranstead</Text>
-    </Center>
+    <>
+      <Center w={"100vw"} h={"90vh"} flexDir={"column"}>
+        <Text fontSize={mainTextSize}>Alfie Ranstead</Text>
+        <Text fontSize={"lg"}>
+          A {calcDif(2005, 4, 5)} Year old Computer Scientist.{" "}
+        </Text>
+      </Center>
+      <Center w={"100vw"} h={"10vh"}>
+        ^ Swipe Up ^
+      </Center>
+    </>
   );
 };
 

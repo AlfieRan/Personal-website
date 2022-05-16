@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Image, Link, Text } from "@chakra-ui/react";
+import { Box, Center, Flex, Image, Link } from "@chakra-ui/react";
 
 const Page = () => {
   return (
@@ -9,15 +9,19 @@ const Page = () => {
           href={"https://www.youtube.com/c/Ep1cal"}
           isExternal
         >
-          Callum "Ep1cal" O'Donnell
+          Callum &quot;Ep1cal&quot; O&apos;Donnell
         </Link>
         <Flex flexDir={"row"}>
           <Image
             src={
               "https://media.discordapp.net/attachments/796385294097711163/942092193252933634/attachment.gif"
             }
+            alt={"Callum"}
           />
-          <Image src={"balls.png"} />
+          <Image
+            src={"balls.png"}
+            alt={"Callum trying to ring me on discord"}
+          />
         </Flex>
       </Center>
     </Box>
