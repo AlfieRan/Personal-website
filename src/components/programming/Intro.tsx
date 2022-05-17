@@ -24,11 +24,10 @@ const Intro = (props: { hidden?: boolean }) => {
         and QTables).
       </Text>
       <Text mt={3}>
-        Since then I&apos;`ve moved onto full stack web development and have
-        been learning a lot - very fast - thanks to the help of some great
-        friends to bounce off of. This is also where I&apos;ve started to put
-        everything I&apos;`ve learnt in the past together to make stuff that I
-        find cool.
+        Since then I&apos;ve moved onto full stack web development and have been
+        learning a lot - very fast - thanks to the help of some great friends to
+        bounce off of. This is also where I&apos;ve started to put everything
+        I&apos;ve learnt in the past together to make stuff that I find cool.
       </Text>
     </Flex>
   );

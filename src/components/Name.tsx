@@ -23,7 +23,7 @@ const Component = (props: { hidden?: boolean }) => {
         w={"100vw"}
         h={"90vh"}
         flexDir={"column"}
-        scrollSnapAlign={"start"}
+        scrollSnapAlign={"center"}
       >
         <Text fontSize={mainTextSize}>Alfie Ranstead</Text>
         <Text fontSize={"lg"}>

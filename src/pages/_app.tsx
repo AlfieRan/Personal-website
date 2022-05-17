@@ -11,6 +11,8 @@ const theme = extendTheme({
       "html, body": {
         color: "#FFFFFF",
         bg: "DarkGrey",
+        "overscroll-behavior-y": "none",
+        fontSize: ["sm", "md", "lg", "xl"],
       },
     },
   },

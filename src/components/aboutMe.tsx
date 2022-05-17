@@ -9,9 +9,16 @@ const AboutMe = () => (
       flexWrap={"wrap"}
       textAlign={"center"}
       px={"lg"}
-      scrollSnapAlign={"start"}
+      py={"lg"}
+      scrollSnapAlign={"center"}
     >
-      <Center mx={10} my={5} flexDir={"column"} w={"xl"} fontSize={"xl"}>
+      <Center
+        mx={10}
+        mt={5}
+        flexDir={"column"}
+        w={"xl"}
+        fontSize={["md", "lg", "xl"]}
+      >
         <Text fontSize={"4xl"}>About Me</Text>
         <Text my={2}>
           I&apos;m a passionate computer scientist who has strong interests in
@@ -29,7 +36,7 @@ const AboutMe = () => (
           years.
         </Text>
       </Center>
-      <AspectRatio ratio={1} maxW={"80vw"} w={"lg"}>
+      <AspectRatio ratio={1} w={["2xs", "xs", "sm", "md"]}>
         <Image
           src={"me.jpeg"}
           objectFit={"cover"}
