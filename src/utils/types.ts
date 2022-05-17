@@ -43,3 +43,12 @@ interface UserIsLogging {
 interface UserIsntLogging {
   logged: false;
 }
+
+export type githubInfo = null | {
+  username: string;
+  avatar_url: string;
+  public_repos: number;
+  private_repos: number;
+  followers: number;
+  following: number;
+};

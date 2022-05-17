@@ -19,7 +19,12 @@ const Component = (props: { hidden?: boolean }) => {
   }
   return (
     <>
-      <Center w={"100vw"} h={"90vh"} flexDir={"column"}>
+      <Center
+        w={"100vw"}
+        h={"90vh"}
+        flexDir={"column"}
+        scrollSnapAlign={"start"}
+      >
         <Text fontSize={mainTextSize}>Alfie Ranstead</Text>
         <Text fontSize={"lg"}>
           A {calcDif(2005, 4, 5)} Year old Computer Scientist.{" "}

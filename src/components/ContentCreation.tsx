@@ -2,7 +2,7 @@ import { Center, Text } from "@chakra-ui/react";
 
 const ContentCreation = () => (
   <>
-    <Center w={"100vw"} h={"100vh"}>
+    <Center w={"100vw"} h={"100vh"} scrollSnapAlign={"start"}>
       <Text>We make a lil video</Text>
     </Center>
   </>

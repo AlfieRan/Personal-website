@@ -1,5 +1,4 @@
 import { AspectRatio, Center, Image, Text } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
 import calcDif from "../utils/calcTime";
 
 const AboutMe = () => (
@@ -10,6 +9,7 @@ const AboutMe = () => (
       flexWrap={"wrap"}
       textAlign={"center"}
       px={"lg"}
+      scrollSnapAlign={"start"}
     >
       <Center mx={10} my={5} flexDir={"column"} w={"xl"} fontSize={"xl"}>
         <Text fontSize={"4xl"}>About Me</Text>
