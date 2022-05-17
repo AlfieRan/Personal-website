@@ -8,8 +8,8 @@ const Intro = (props: { hidden?: boolean }) => {
     <Flex fontSize={"lg"} px={2} flexDir={"column"}>
       <Text>
         Although I had my fair share of scratch experience before then, it was
-        on Christmas at age 10 where I was given a "How to make a website" book
-        that I started to properly pick up programming.
+        on Christmas at age 10 where I was given a &quot;How to make a
+        website&quot; book that I started to properly pick up programming.
       </Text>
       <Text mt={3}>
         I spent the following two years really getting to know the basics of
@@ -24,10 +24,11 @@ const Intro = (props: { hidden?: boolean }) => {
         and QTables).
       </Text>
       <Text mt={3}>
-        Since then I've moved onto full stack web development and have been
-        learning a lot - very fast - thanks to the help of some great friends to
-        bounce off of. This is also where I've started to put everything I've
-        learnt in the past together to make stuff that I find cool.
+        Since then I&apos;`ve moved onto full stack web development and have
+        been learning a lot - very fast - thanks to the help of some great
+        friends to bounce off of. This is also where I&apos;ve started to put
+        everything I&apos;`ve learnt in the past together to make stuff that I
+        find cool.
       </Text>
     </Flex>
   );
