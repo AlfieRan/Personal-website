@@ -1,6 +1,6 @@
 import { Center, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import calcDif from "../utils/calcTime";
+import calcDif from "../../utils/calcTime";
 
 const Component = (props: { hidden?: boolean }) => {
   const [width, setWidth] = useState(1000);

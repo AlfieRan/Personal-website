@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
-import Name from "../components/Name";
+import Name from "../components/extra/Name";
 import AboutMe from "../components/aboutMe";
-import Programming from "../components/programming/Programming";
+import Programming from "../components/Programming";
 import ContentCreation from "../components/ContentCreation";
 import Education from "../components/Education";
 import Contact from "../components/Contact";

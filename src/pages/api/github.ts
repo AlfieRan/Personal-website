@@ -1,5 +1,5 @@
 import { Octokit } from "octokit";
-const enabled: boolean = process.env.DEVELOPMENT === "true";
+const enabled: boolean = process.env.DEVELOPMENT !== "true";
 
 const API_Key = process.env.API_KEY;
 const octokit = new Octokit({
@@ -8,6 +8,7 @@ const octokit = new Octokit({
 
 export default async function githubServerSideCall(req: any, res: any) {
   if (enabled) {
+    console.log("githubServerSideCall");
     const data = await octokit.request("GET /user", {
       Authorization: `token ${API_Key}`,
     });
@@ -30,6 +31,7 @@ export default async function githubServerSideCall(req: any, res: any) {
       });
     }
   } else {
+    console.log("githubServerSideCall disabled, using mock data");
     const info = {
       username: "AlfieRan",
       avatar_url: "https://avatars.githubusercontent.com/u/89932058?v=4",
