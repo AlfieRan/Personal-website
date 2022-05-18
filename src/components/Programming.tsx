@@ -43,16 +43,6 @@ const Programming = () => {
     },
   ];
 
-  if (typeof screen !== "undefined") {
-    useEffect(() => {
-      if (screen.width < 1200) {
-        setOverFlow(true);
-      } else {
-        setOverFlow(false);
-      }
-    }, [screen.width]);
-  }
-
   useEffect(() => {
     getGithubInfo().then((info) => {
       setGithubInfo(info);
@@ -90,9 +80,9 @@ const Programming = () => {
               laptop and a lot of creativity.
             </Text>
             <Text mb={2}>
-              In the ~{calcDif(2014, 8, 0)} years that I've been programming a
-              lot has changed, I've learned a lot and I've moved from arduino
-              and c to a myriad of technologies.
+              In the ~{calcDif(2014, 8, 0)} years that I&apos;ve been
+              programming a lot has changed, I&apos;ve learned a lot and
+              I&apos;ve moved from arduino and c to a myriad of technologies.
             </Text>
           </Flex>
           <Flex
@@ -177,6 +167,7 @@ const Programming = () => {
                 src={githubInfo?.avatar_url ?? ""}
                 w={"4xs"}
                 borderRadius={"full"}
+                alt={"github avatar"}
               />
               <Text fontSize={"3xl"}>{githubInfo?.username}</Text>
               <Text hidden={githubInfo?.public_repos !== 0 && !githubInfo}>
