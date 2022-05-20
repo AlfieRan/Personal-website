@@ -7,20 +7,21 @@ const SingleProject = (props: {
   link: string;
 }) => {
   return (
-    <Link href={props.link} _hover={{}}>
+    <Link href={props.link} _hover={{}} h={"fit-content"}>
       <Center
-        w={"sm"}
-        h={"2xs"}
+        h={"3xs"}
+        w={"xs"}
         flexDir={"row"}
         borderWidth={1}
         borderRadius={"lg"}
+        maxW={"90vw"}
       >
         <Center
           flexDir={"column"}
           borderLeftRadius={"lg"}
           bg={"#262a2c"}
-          h={"full"}
           w={"full"}
+          h={"full"}
           fontSize={"md"}
         >
           <Text fontSize={"lg"} fontWeight={"semibold"}>
@@ -28,7 +29,7 @@ const SingleProject = (props: {
           </Text>
           <Text>{props.info}</Text>
         </Center>
-        <Center borderRightRadius={"lg"} bg={"#525252"} h={"2xs"} w={"sm"}>
+        <Center borderRightRadius={"lg"} bg={"#525252"} h={"3xs"} w={"xs"}>
           <AspectRatio
             ratio={1}
             h={"100%"}

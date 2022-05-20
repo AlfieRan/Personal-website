@@ -51,14 +51,7 @@ const Programming = () => {
 
   return (
     <>
-      <Center
-        w={"100vw"}
-        h={"100vh"}
-        flexWrap={"wrap"}
-        px={"lg"}
-        maxW={"100vw"}
-        maxH={"100vh"}
-      >
+      <Center w={"100vw"} flexWrap={"wrap"} px={"lg"} maxW={"100vw"}>
         <Flex
           flexDir={"column"}
           textAlign={"left"}
