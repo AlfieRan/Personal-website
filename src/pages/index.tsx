@@ -5,6 +5,7 @@ import Programming from "../components/Programming";
 import ContentCreation from "../components/ContentCreation";
 import Education from "../components/Education";
 import Contact from "../components/Contact";
+import Projects from "../components/Projects";
 
 const page = () => {
   return (
@@ -12,6 +13,7 @@ const page = () => {
       <Name />
       <AboutMe />
       <Programming />
+      <Projects />
       <ContentCreation />
       <Education />
       <Contact />
