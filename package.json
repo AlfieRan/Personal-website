@@ -25,5 +25,9 @@
     "eslint": "8.15.0",
     "eslint-config-next": "12.1.6",
     "prettier": "^2.5.1"
+  },
+  "scripts": {
+    "lint": "yarn next lint",
+    "dev": "yarn next dev"
   }
 }
