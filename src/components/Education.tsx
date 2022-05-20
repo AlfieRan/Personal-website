@@ -2,7 +2,7 @@ import { Center, Text } from "@chakra-ui/react";
 
 const Education = () => (
   <>
-    <Center w={"100vw"} h={"100vh"}>
+    <Center w={"100vw"} minH={"100vh"}>
       <Text>I go schol</Text>
     </Center>
   </>
