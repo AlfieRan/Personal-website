@@ -8,13 +8,7 @@ import Contact from "../components/Contact";
 
 const page = () => {
   return (
-    <Box
-      w={"100vw"}
-      h={"100vh"}
-      textAlign={"center"}
-      scrollSnapType={"y mandatory"}
-      overflowY={"scroll"}
-    >
+    <Box w={"100vw"} h={"100vh"} textAlign={"center"} overflowY={"scroll"}>
       <Name />
       <AboutMe />
       <Programming />

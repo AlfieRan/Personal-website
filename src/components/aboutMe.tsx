@@ -8,7 +8,6 @@ const AboutMe = () => (
       textAlign={"center"}
       px={"lg"}
       py={"lg"}
-      scrollSnapAlign={"center"}
     >
       <Center mx={10} mt={5} flexDir={"column"} w={"xl"} fontSize={"md"}>
         <Text fontSize={"4xl"}>About Me</Text>

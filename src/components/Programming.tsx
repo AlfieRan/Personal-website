@@ -56,7 +56,6 @@ const Programming = () => {
         h={"100vh"}
         flexWrap={"wrap"}
         px={"lg"}
-        scrollSnapAlign={"center"}
         maxW={"100vw"}
         maxH={"100vh"}
       >
