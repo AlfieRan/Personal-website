@@ -37,7 +37,11 @@ const SingleProject = (props: {
             borderRightRadius={"lg"}
             borderWidth={1}
           >
-            <Image src={props.image} borderRightRadius={"lg"} />
+            <Image
+              src={props.image}
+              borderRightRadius={"lg"}
+              alt={`Project image for ${props.title}`}
+            />
           </AspectRatio>
         </Center>
       </Center>
