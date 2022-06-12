@@ -13,6 +13,7 @@ const SingleProject = (props: {
       _hover={{ transform: "scale(1.1)" }}
       _active={{ transform: "scale(0.9)" }}
       h={"fit-content"}
+      m={3}
     >
       <Center
         h={"3xs"}

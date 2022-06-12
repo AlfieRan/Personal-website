@@ -14,6 +14,12 @@ const Projects = () => (
           image={"/Projects/PersonalWebsite.png"}
           link={"https://github.com/AlfieRan/Personal-website"}
         />
+        <SingleProject
+          title={"The MonoChain"}
+          info={"A more Efficent, more Eco-friendly, custom built Blockchain."}
+          image={"/Projects/Blockchain.jpeg"}
+          link={"https://monochain.network"}
+        />
       </Flex>
     </Center>
   </>

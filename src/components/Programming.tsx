@@ -27,9 +27,15 @@ const Programming = () => {
     "Prisma",
     "PostgreSQL",
     "Docker",
+    "V lang",
     "C#",
   ];
-  const TechLearning: string[] = ["V lang", "Kubernetes", "x86 Assembly", "C"];
+  const TechLearning: string[] = [
+    "Monorepos",
+    "Kubernetes",
+    "x86 Assembly",
+    "C",
+  ];
   const techStuff = [
     {
       name: "Technologies I use:",
@@ -80,7 +86,8 @@ const Programming = () => {
             <Text mb={2}>
               In the ~{calcDif(2014, 8, 0)} years that I&apos;ve been
               programming a lot has changed, I&apos;ve learned a lot and
-              I&apos;ve moved from arduino and c to a myriad of technologies.
+              I&apos;ve moved from arduino and a little bit of C to a myriad of
+              technologies.
             </Text>
           </Flex>
           <Flex
