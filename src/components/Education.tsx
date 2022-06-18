@@ -13,7 +13,6 @@ const Education = () => {
     } else {
       setImageSize(width * 0.3);
     }
-    console.log(`Width: ${width}, imageSize: ${imageSize}`);
   }, [width]);
 
   return (

@@ -8,8 +8,8 @@ const Projects = () => (
         My Current Projects
       </Text>
       <Text maxW={"800px"} mb={3}>
-        I've done so many different things it's hard to summarise them all, but
-        here's the top two projects I'm working on right now!
+        I&apos;ve done so many different things it&apos;s hard to summarise them
+        all, but here&apos;s the top two projects I&apos;m working on right now!
       </Text>
       <Flex wrap={"wrap"}>
         <SingleProject
