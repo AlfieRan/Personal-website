@@ -8,6 +8,7 @@ const AboutMe = () => (
       textAlign={"center"}
       px={"lg"}
       py={"lg"}
+      mt={"10vh"}
     >
       <Center mx={10} mt={5} flexDir={"column"} w={"xl"} fontSize={"md"}>
         <Text fontSize={"4xl"}>About Me</Text>

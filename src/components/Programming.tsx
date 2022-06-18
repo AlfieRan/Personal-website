@@ -15,7 +15,6 @@ import calcDif from "../utils/calcTime";
 
 const Programming = () => {
   const [githubInfo, setGithubInfo] = useState<githubInfo>(null);
-  const [overFlow, setOverFlow] = useState<boolean>(false);
   const TechUsing: string[] = [
     "TypeScript",
     "Python",
@@ -59,6 +58,7 @@ const Programming = () => {
     <>
       <Center
         w={"100vw"}
+        mt={"10vh"}
         flexWrap={"wrap"}
         px={"lg"}
         maxW={"100vw"}
@@ -90,12 +90,7 @@ const Programming = () => {
               technologies.
             </Text>
           </Flex>
-          <Flex
-            flexDir={"column"}
-            fontSize={"sm"}
-            maxW={"85vw"}
-            hidden={overFlow}
-          >
+          <Flex flexDir={"column"} fontSize={"sm"} maxW={"85vw"}>
             {techStuff.map((type, id) => (
               <Flex key={id} flexDir={"column"} maxW={"85vw"}>
                 <Text fontSize={"2xl"}>{type.name}</Text>

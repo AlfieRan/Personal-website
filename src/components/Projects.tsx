@@ -3,16 +3,22 @@ import SingleProject from "./extra/singleProject";
 
 const Projects = () => (
   <>
-    <Center w={"100vw"} flexDir={"column"} minH={"100vh"}>
-      <Text fontSize={"3xl"} mb={5}>
-        Here are a few of my favourite projects:
+    <Center w={"100vw"} flexDir={"column"} minH={"100vh"} mt={"10vh"}>
+      <Text fontSize={"3xl"} mb={1}>
+        My Current Projects
       </Text>
-      <Flex>
+      <Text maxW={"800px"} mb={3}>
+        I've done so many different things it's hard to summarise them all, but
+        here's the top two projects I'm working on right now!
+      </Text>
+      <Flex wrap={"wrap"}>
         <SingleProject
-          title={"Personal Website"}
-          info={"This website is completely open source and hosted on Github"}
-          image={"/Projects/PersonalWebsite.png"}
-          link={"https://github.com/AlfieRan/Personal-website"}
+          title={"Mutuals.Chat"}
+          info={
+            "Find friends who have similar interests and video chat with them!"
+          }
+          image={"/Projects/mutuals.png"}
+          link={"https://mutuals.chat"}
         />
         <SingleProject
           title={"The MonoChain"}

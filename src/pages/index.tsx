@@ -6,6 +6,7 @@ import ContentCreation from "../components/ContentCreation";
 import Education from "../components/Education";
 import Contact from "../components/Contact";
 import Projects from "../components/Projects";
+import { useEffect, useState } from "react";
 
 const page = () => {
   const subSections: { id: string; component: any }[] = [
