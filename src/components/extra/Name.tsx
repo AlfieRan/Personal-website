@@ -20,7 +20,7 @@ const Component = (props: { hidden?: boolean }) => {
   return (
     <>
       <Center
-        w={"100vw"}
+        
         h={"90vh"}
         flexDir={"column"}
         textAlign={"center"}
@@ -31,7 +31,7 @@ const Component = (props: { hidden?: boolean }) => {
           A {calcDif(2005, 4, 5)} Year old Computer Scientist.{" "}
         </Text>
       </Center>
-      <Center w={"100vw"} h={"10vh"}>
+      <Center  h={"10vh"}>
         ^ Swipe Up ^
       </Center>
     </>

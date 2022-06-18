@@ -2,7 +2,7 @@ import { Box, Center, Text, Image, Flex } from "@chakra-ui/react";
 
 const Page = () => {
   return (
-    <Box w={"100vw"} h={"100vh"}>
+    <Box  h={"100vh"}>
       <Center h={"full"} w={"full"}>
         <Flex flexDir={"column"}>
           <Text fontSize={"5xl"}>Lewis Claybrough</Text>

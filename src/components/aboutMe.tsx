@@ -3,7 +3,7 @@ import { AspectRatio, Center, Image, Text } from "@chakra-ui/react";
 const AboutMe = () => (
   <>
     <Center
-      w={"100vw"}
+      
       minH={"80vh"}
       flexWrap={"wrap"}
       textAlign={"center"}

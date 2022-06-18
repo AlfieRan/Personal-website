@@ -1,4 +1,4 @@
-import { AspectRatio, Center, Flex, Image, Text } from "@chakra-ui/react";
+import {AspectRatio, Center, Flex, Image, Text, Stack, Box} from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 const Education = () => {
@@ -6,20 +6,11 @@ const Education = () => {
   const breakpoint = 600;
   const [imageSize, setImageSize] = useState<number>(200);
 
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    if (width < breakpoint) {
-      setImageSize(width * 0.8);
-    } else {
-      setImageSize(width * 0.3);
-    }
-  }, [width]);
 
   return (
-    <>
-      <Center w={"100vw"} minH={"100vh"} flexDir={"column"}>
-        <Flex flexDir={"row"} maxW={"80vw"} flexWrap={"wrap"}>
-          <Center flexDir={"column"} w={"lg"}>
+      <Center  minH={"100vh"} flexDir={"column"}>
+        <Stack direction={["column", "column","column", "row"]} w={"80vw"} spacing={8} h={"full"} alignItems={"center"}>
+          <Center flexDir={"column"} flex={1} maxW={"lg"} alignSelf={"center"} h={"full"}>
             <Text fontSize={"3xl"}>Education</Text>
             <Text fontSize={"lg"}>
               I am currently attending a Grammar Sixth form in South West
@@ -31,8 +22,7 @@ const Education = () => {
               which includes a ~30 minute train journey (pictured).
             </Text>
           </Center>
-          <Center m={1}>
-            <AspectRatio ratio={4 / 3} minW={`${imageSize}px`}>
+            <AspectRatio ratio={4 / 3} maxW={"70vw"}flex={1.25} h={"full"} w={"inherit"}>
               <Image
                 src={"train_station.png"}
                 borderRadius={"lg"}
@@ -41,10 +31,8 @@ const Education = () => {
                 }
               />
             </AspectRatio>
-          </Center>
-        </Flex>
+        </Stack>
       </Center>
-    </>
   );
 };
 

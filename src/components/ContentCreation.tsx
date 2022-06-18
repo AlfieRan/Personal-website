@@ -17,7 +17,7 @@ const ContentCreation = () => {
 
   return (
     <>
-      <Center w={"100vw"} minH={"100vh"} flexWrap={"wrap"} mt={"10vh"}>
+      <Center  minH={"100vh"} flexWrap={"wrap"} mt={"10vh"}>
         <Flex flexDir={"column"} p={10} w={"lg"} maxW={"90vw"} fontSize={"md"}>
           <Text fontSize={"4xl"}>Content Creation</Text>
           <Text>

@@ -16,8 +16,7 @@ const Contact = () => {
   ];
 
   return (
-    <>
-      <Center w={"100vw"} minH={"100vh"} flexDir={"column"}>
+      <Center  minH={"100vh"} flexDir={"column"}>
         <Text fontSize={"4xl"}>Contact Me</Text>
         <Center flexDir={"column"} fontSize={"lg"}>
           {ContactItems.map((item) => {
@@ -37,7 +36,6 @@ const Contact = () => {
           })}
         </Center>
       </Center>
-    </>
   );
 };
 
