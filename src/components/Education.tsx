@@ -34,7 +34,7 @@ const Education = () => {
           <Center m={1}>
             <AspectRatio ratio={4 / 3} minW={`${imageSize}px`}>
               <Image
-                src={"train_station.jpeg"}
+                src={"train_station.png"}
                 borderRadius={"lg"}
                 alt={
                   "A picture of the train station I go to every morning to get to college"

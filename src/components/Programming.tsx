@@ -125,6 +125,7 @@ const Programming = () => {
           </Flex>
         </Flex>
         <Link
+          maxW={"90vw"}
           isExternal
           p={4}
           bg={"#252323"}

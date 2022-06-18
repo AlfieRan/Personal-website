@@ -11,7 +11,7 @@ const Projects = () => (
         I&apos;ve done so many different things it&apos;s hard to summarise them
         all, but here&apos;s the top two projects I&apos;m working on right now!
       </Text>
-      <Flex wrap={"wrap"}>
+      <Center flexWrap={"wrap"}>
         <SingleProject
           title={"Mutuals.Chat"}
           info={
@@ -26,7 +26,7 @@ const Projects = () => (
           image={"/Projects/Blockchain.jpeg"}
           link={"https://monochain.network"}
         />
-      </Flex>
+      </Center>
     </Center>
   </>
 );
