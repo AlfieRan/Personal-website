@@ -57,11 +57,10 @@ const Programming = () => {
   return (
     <>
       <Center
-        
+
         mt={"10vh"}
         flexWrap={"wrap"}
         px={"lg"}
-        max
         minH={"100vh"}
       >
         <Flex
