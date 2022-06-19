@@ -26,7 +26,7 @@ const ContentCreation = () => {
           </Text>
           <Text mt={2}>
             But that hasn&apos;t stopped me from trying and one of the best
-            creative outputs I&apos;ve found for myself apart form programming
+            creative outputs I&apos;ve found for myself apart from programming
             is the art of video creation.
           </Text>
           <Text mt={2}>
