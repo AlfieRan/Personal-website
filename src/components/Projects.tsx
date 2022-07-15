@@ -3,7 +3,7 @@ import SingleProject from "./extra/singleProject";
 
 const Projects = () => (
   <>
-    <Center w={"100vw"} flexDir={"column"} minH={"100vh"} mt={"10vh"}>
+    <Center  flexDir={"column"} minH={"100vh"} mt={"10vh"}>
       <Text fontSize={"3xl"} mb={1}>
         My Current Projects
       </Text>

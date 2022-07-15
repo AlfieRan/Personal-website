@@ -20,7 +20,7 @@ const page = () => {
   ];
 
   return (
-    <Box w={"100vw"} h={"100vh"} textAlign={"center"} overflowY={"scroll"}>
+    <Box  h={"100vh"} textAlign={"center"} overflowY={"scroll"}>
       {subSections.map((section) => (
         <Flex key={section.id} mb={"5vh"} flexDir={"column"}>
           <section.component />

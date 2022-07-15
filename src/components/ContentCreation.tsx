@@ -17,7 +17,7 @@ const ContentCreation = () => {
 
   return (
     <>
-      <Center w={"100vw"} minH={"100vh"} flexWrap={"wrap"} mt={"10vh"}>
+      <Center  minH={"100vh"} flexWrap={"wrap"} mt={"10vh"}>
         <Flex flexDir={"column"} p={10} w={"lg"} maxW={"90vw"} fontSize={"md"}>
           <Text fontSize={"4xl"}>Content Creation</Text>
           <Text>
@@ -26,7 +26,7 @@ const ContentCreation = () => {
           </Text>
           <Text mt={2}>
             But that hasn&apos;t stopped me from trying and one of the best
-            creative outputs I&apos;ve found for myself apart form programming
+            creative outputs I&apos;ve found for myself apart from programming
             is the art of video creation.
           </Text>
           <Text mt={2}>
