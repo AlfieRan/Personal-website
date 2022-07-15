@@ -19,16 +19,19 @@ const Education = () => {
     <>
       <Center w={"100vw"} minH={"100vh"} flexDir={"column"}>
         <Flex flexDir={"row"} maxW={"80vw"} flexWrap={"wrap"}>
-          <Center flexDir={"column"} w={"lg"}>
+          <Center flexDir={"column"} w={"lg"} fontSize={"lg"}>
             <Text fontSize={"3xl"}>Education</Text>
-            <Text fontSize={"lg"}>
+            <Text>
               I am currently attending a Grammar Sixth form in South West
               England where I am completing my A-Levels.
               <br />
-              The specific A-Levels I am studying are: Maths, Further Maths,
-              Physics and Computer Science.
-              <br />I travel just under an hour everyday to get to my Sixth form
-              which includes a ~30 minute train journey (pictured).
+              The A-Levels I am studying are: Maths, Further Maths, Physics and
+              Computer Science.
+            </Text>
+            <Text mt={3}>
+              I travel just under an hour everyday to get to my Sixth form which
+              includes a ~30 minute train journey, this journey starts at the
+              station pictured.
             </Text>
           </Center>
           <Center m={1}>
