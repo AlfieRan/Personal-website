@@ -1,9 +1,9 @@
-import { Center, Flex, Text } from "@chakra-ui/react";
+import { Center, Text } from "@chakra-ui/react";
 import SingleProject from "./extra/singleProject";
 
 const Projects = () => (
   <>
-    <Center  flexDir={"column"} minH={"100vh"} mt={"10vh"}>
+    <Center flexDir={"column"} minH={"100vh"} mt={"10vh"}>
       <Text fontSize={"3xl"} mb={1}>
         My Current Projects
       </Text>

@@ -7,7 +7,7 @@ import {
   Grid,
   GridItem,
 } from "@chakra-ui/react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import getGithubInfo from "../utils/github";
 import { githubInfo } from "../utils/types";
 import GithubLogo from "./extra/githubLogo";
@@ -56,13 +56,7 @@ const Programming = () => {
 
   return (
     <>
-      <Center
-
-        mt={"10vh"}
-        flexWrap={"wrap"}
-        px={"lg"}
-        minH={"100vh"}
-      >
+      <Center mt={"10vh"} flexWrap={"wrap"} px={"lg"} minH={"100vh"}>
         <Flex
           flexDir={"column"}
           textAlign={"left"}
