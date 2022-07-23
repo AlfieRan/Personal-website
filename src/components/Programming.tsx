@@ -25,16 +25,13 @@ const Programming = () => {
     "Express",
     "Prisma",
     "PostgreSQL",
+    "Redis",
     "Docker",
     "V lang",
+    "Monorepos",
     "C#",
   ];
-  const TechLearning: string[] = [
-    "Monorepos",
-    "Kubernetes",
-    "x86 Assembly",
-    "C",
-  ];
+  const TechLearning: string[] = ["Kubernetes", "x86 Assembly", "C"];
   const techStuff = [
     {
       name: "Technologies I use:",

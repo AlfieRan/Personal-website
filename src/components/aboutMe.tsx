@@ -3,7 +3,6 @@ import { AspectRatio, Center, Image, Text } from "@chakra-ui/react";
 const AboutMe = () => (
   <>
     <Center
-      
       minH={"80vh"}
       flexWrap={"wrap"}
       textAlign={"center"}
@@ -30,7 +29,7 @@ const AboutMe = () => (
       </Center>
       <AspectRatio ratio={1} w={["2xs", "xs", "sm", "md"]}>
         <Image
-          src={"me.png"}
+          src={"/me/me_in_car.png"}
           objectFit={"cover"}
           borderRadius={"full"}
           alt={"A photo of me"}
