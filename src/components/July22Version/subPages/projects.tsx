@@ -33,18 +33,20 @@ const Projects = () => {
       <Flex flexDir={"column"} textAlign={"center"}>
         <Text fontSize={"xl"}>My Recent Projects</Text>
         <Text fontSize={"md"}>
-          I am constantly creating little projects and cool things so
-          here&apos;s a few of the most interesting ones.{" "}
+          I am constantly creating projects so here&apos;s just a few of my most
+          recent ones.
         </Text>
       </Flex>
       <Center flexDir={"row"} flexWrap={"wrap"}>
         {Projects.map((project) => (
-          <SingleProject
-            title={project.title}
-            info={project.info}
-            image={project.image}
-            link={project.link}
-          />
+          <Flex key={project.title}>
+            <SingleProject
+              title={project.title}
+              info={project.info}
+              image={project.image}
+              link={project.link}
+            />
+          </Flex>
         ))}
       </Center>
     </Center>
