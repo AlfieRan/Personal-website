@@ -44,7 +44,7 @@ interface UserIsntLogging {
   logged: false;
 }
 
-export type githubInfo = null | {
+export type githubInfoType = null | {
   username: string;
   avatar_url: string;
   public_repos: number;

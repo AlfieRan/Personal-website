@@ -12,6 +12,7 @@ const theme = extendTheme({
         color: "#FFFFFF",
         bg: "DarkGrey",
         fontSize: ["sm", "md", "lg", "xl"],
+        overscrollBehavior: "none",
       },
     },
   },

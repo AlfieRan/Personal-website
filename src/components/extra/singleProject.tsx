@@ -13,33 +13,32 @@ const SingleProject = (props: {
       transform={"scale(0.9)"}
       _hover={{ transform: "scale(0.95)" }}
       _active={{ transform: "scale(0.8)" }}
-      h={"fit-content"}
       textAlign={"center"}
+      w={"full"}
     >
       <Center
-        h={"3xs"}
-        w={"xs"}
         flexDir={"row"}
         borderWidth={1}
         borderRadius={"lg"}
-        maxW={"90vw"}
+        bg={"#262a2c"}
+        justifyContent={"space-between"}
       >
-        <Center
-          flexDir={"column"}
-          borderLeftRadius={"lg"}
-          bg={"#262a2c"}
-          w={"full"}
-          h={"full"}
-          fontSize={"md"}
-        >
-          <Text fontSize={"lg"} fontWeight={"semibold"}>
-            {props.title}
-          </Text>
-          <Text px={2} fontSize={"sm"}>
-            {props.info}
-          </Text>
+        <Center borderLeftRadius={"lg"} h={"100%"} w={"full"}>
+          <Center maxW={"60%"} flexDir={"column"}>
+            <Text fontSize={"xl"} fontWeight={"semibold"}>
+              {props.title}
+            </Text>
+            <Text px={2} fontSize={"sm"}>
+              {props.info}
+            </Text>
+          </Center>
         </Center>
-        <Center borderRightRadius={"lg"} bg={"#525252"} h={"3xs"} w={"xs"}>
+        <Center
+          borderRightRadius={"lg"}
+          bg={"#525252"}
+          minW={"200px"}
+          w={"30%"}
+        >
           <AspectRatio
             ratio={1}
             h={"100%"}

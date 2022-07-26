@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import sleep from "./sleep";
+import sleep from "../sleep";
 
 export async function fadeIn(
   ms: number,

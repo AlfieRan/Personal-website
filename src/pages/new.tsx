@@ -5,7 +5,11 @@ import About from "../components/July22Version/subPages/about";
 import Programming from "../components/July22Version/subPages/programming";
 import Projects from "../components/July22Version/subPages/projects";
 import sleep from "../utils/sleep";
-import { fadeIn, fadeOut } from "../utils/fader";
+import { fadeIn, fadeOut } from "../utils/transitions/fader";
+import useWidth from "../utils/hooks/useWidth";
+import useHeight from "../utils/hooks/useHeight";
+import { useRouter } from "next/router";
+import useAspect from "../utils/hooks/useAspect";
 
 export type stateTypes =
   | "about"
@@ -24,6 +28,8 @@ const Index = () => {
   const [active, setActive] = useState<stateTypes>("about");
   const [next, setNext] = useState<stateTypes>("about");
   const [opacity, setOpacity] = useState<number>(100);
+  const router = useRouter();
+  const aspect = useAspect();
   const States = {
     about: <About />,
     programming: <Programming />,
@@ -32,6 +38,14 @@ const Index = () => {
     education: <div>Education</div>,
     contact: <div>Contact</div>,
   };
+
+  useEffect(() => {
+    if (aspect < 1.1) {
+      router.push("/mobile").catch((err) => {
+        console.log(err);
+      });
+    }
+  }, [aspect]);
 
   useEffect(() => {
     const transition = async () => {
@@ -53,7 +67,7 @@ const Index = () => {
   }, [next]);
 
   return (
-    <Center w={"100vw"} h={"100vh"} p={3}>
+    <Center w={"100vw"} h={"100vh"} p={3} overscrollBehavior={"none"}>
       <Menu setState={setNext} />
       <Center
         maxW={"80%"}
@@ -67,6 +81,9 @@ const Index = () => {
         <Center
           opacity={`${opacity}%`}
           transform={`scale(${parseOpacity(opacity)})`}
+          overflowY={"scroll"}
+          overflowX={"hidden"}
+          p={"10px"}
         >
           {States[active]}
         </Center>

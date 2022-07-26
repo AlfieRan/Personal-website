@@ -3,6 +3,7 @@ import { activeState, stateTypes } from "../../pages/new";
 import GithubLogo from "../extra/githubLogo";
 import TwitterLogo from "../extra/twitterLogo";
 import YoutubeLogo from "../extra/youtubeLogo";
+import calcDif from "../../utils/calcTime";
 
 const Menu = (props: { setState: activeState }) => {
   const buttons: {
@@ -66,8 +67,11 @@ const Menu = (props: { setState: activeState }) => {
       borderRightWidth={0.5}
       flexDir={"column"}
     >
-      <Center w={"100%"} h={"20%"}>
+      <Center w={"100%"} h={"20%"} flexDir={"column"} px={3}>
         <Text textAlign={"center"}>Alfie Ranstead</Text>
+        <Text fontSize={"xs"} textAlign={"center"}>
+          A {calcDif(2005, 5, 6)} year old Software Enthusiast
+        </Text>
       </Center>
       <Center w={"100%"} flexDir={"column"} h={"60%"}>
         {buttons.map((button) => (

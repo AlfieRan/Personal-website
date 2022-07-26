@@ -1,4 +1,4 @@
-import { Center, Flex, Text } from "@chakra-ui/react";
+import { Center, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import SingleProject from "../../extra/singleProject";
 
 const Projects = () => {
@@ -29,25 +29,34 @@ const Projects = () => {
   ];
 
   return (
-    <Center w={"100%"} h={"100%"} flexDir={"column"}>
-      <Flex flexDir={"column"} textAlign={"center"}>
-        <Text fontSize={"xl"}>My Recent Projects</Text>
+    <Center
+      w={"100%"}
+      h={"100%"}
+      flexDir={"column"}
+      overflowY={"scroll"}
+      overflowX={"hidden"}
+      p={"10px"}
+    >
+      <Flex flexDir={"column"} textAlign={"center"} mb={"15px"}>
+        <Text fontSize={"2xl"}>My Recent Projects</Text>
         <Text fontSize={"md"}>
           I am constantly creating projects so here&apos;s just a few of my most
           recent ones.
         </Text>
       </Flex>
       <Center flexDir={"row"} flexWrap={"wrap"}>
-        {Projects.map((project) => (
-          <Flex key={project.title}>
-            <SingleProject
-              title={project.title}
-              info={project.info}
-              image={project.image}
-              link={project.link}
-            />
-          </Flex>
-        ))}
+        <SimpleGrid>
+          {Projects.map((project) => (
+            <Flex key={project.title}>
+              <SingleProject
+                title={project.title}
+                info={project.info}
+                image={project.image}
+                link={project.link}
+              />
+            </Flex>
+          ))}
+        </SimpleGrid>
       </Center>
     </Center>
   );
