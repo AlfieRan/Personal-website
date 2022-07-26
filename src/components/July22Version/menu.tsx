@@ -14,6 +14,10 @@ const Menu = (props: { setState: activeState }) => {
       title: "Programming",
       component: "programming",
     },
+    {
+      title: "Projects",
+      component: "projects",
+    },
   ];
 
   const Socials: { component: any; alt: string; link: string }[] = [

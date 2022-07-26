@@ -3,8 +3,9 @@ import Menu from "../components/July22Version/menu";
 import { Dispatch, SetStateAction, useState } from "react";
 import About from "../components/July22Version/subPages/about";
 import Programming from "../components/July22Version/subPages/programming";
+import Projects from "../components/July22Version/subPages/projects";
 
-export type stateTypes = "about" | "programming";
+export type stateTypes = "about" | "programming" | "projects";
 export type activeState = Dispatch<SetStateAction<stateTypes>>;
 
 const Index = () => {
@@ -12,6 +13,7 @@ const Index = () => {
   const States = {
     about: <About />,
     programming: <Programming />,
+    projects: <Projects />,
   };
 
   return (

@@ -1,5 +1,5 @@
 import { Center, Text } from "@chakra-ui/react";
-import SingleProject from "./extra/singleProject";
+import SingleProject from "../extra/singleProject";
 
 const Projects = () => (
   <>

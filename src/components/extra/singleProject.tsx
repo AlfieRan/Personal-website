@@ -10,10 +10,11 @@ const SingleProject = (props: {
     <Link
       isExternal
       href={props.link}
-      _hover={{ transform: "scale(1.1)" }}
-      _active={{ transform: "scale(0.9)" }}
+      transform={"scale(0.9)"}
+      _hover={{ transform: "scale(0.95)" }}
+      _active={{ transform: "scale(0.8)" }}
       h={"fit-content"}
-      m={3}
+      textAlign={"center"}
     >
       <Center
         h={"3xs"}
@@ -34,7 +35,9 @@ const SingleProject = (props: {
           <Text fontSize={"lg"} fontWeight={"semibold"}>
             {props.title}
           </Text>
-          <Text px={2}>{props.info}</Text>
+          <Text px={2} fontSize={"sm"}>
+            {props.info}
+          </Text>
         </Center>
         <Center borderRightRadius={"lg"} bg={"#525252"} h={"3xs"} w={"xs"}>
           <AspectRatio

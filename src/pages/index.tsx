@@ -1,11 +1,11 @@
 import { Box, Flex } from "@chakra-ui/react";
 import Name from "../components/extra/Name";
-import AboutMe from "../components/aboutMe";
-import Programming from "../components/Programming";
-import ContentCreation from "../components/ContentCreation";
-import Education from "../components/Education";
-import Contact from "../components/Contact";
-import Projects from "../components/Projects";
+import AboutMe from "../components/May22Version/aboutMe";
+import Programming from "../components/May22Version/Programming";
+import ContentCreation from "../components/May22Version/ContentCreation";
+import Education from "../components/May22Version/Education";
+import Contact from "../components/May22Version/Contact";
+import Projects from "../components/May22Version/Projects";
 
 const page = () => {
   const subSections: { id: string; component: any }[] = [

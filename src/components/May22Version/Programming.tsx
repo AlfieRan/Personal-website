@@ -8,10 +8,10 @@ import {
   GridItem,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import getGithubInfo from "../utils/github";
-import { githubInfo } from "../utils/types";
-import GithubLogo from "./extra/githubLogo";
-import calcDif from "../utils/calcTime";
+import getGithubInfo from "../../utils/github";
+import { githubInfo } from "../../utils/types";
+import GithubLogo from "../extra/githubLogo";
+import calcDif from "../../utils/calcTime";
 
 const Programming = () => {
   const [githubInfo, setGithubInfo] = useState<githubInfo>(null);
