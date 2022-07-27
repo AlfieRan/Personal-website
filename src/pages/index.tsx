@@ -46,7 +46,7 @@ const Index = () => {
         console.log(err);
       });
     }
-  }, [mode]);
+  }, [mode, router]);
 
   useEffect(() => {
     const transition = async () => {
@@ -65,7 +65,7 @@ const Index = () => {
     transition().catch((err) => {
       console.log(err);
     });
-  }, [next]);
+  }, [next, active]);
 
   return (
     <Center w={"100vw"} h={"100vh"} p={3} overscrollBehavior={"none"}>

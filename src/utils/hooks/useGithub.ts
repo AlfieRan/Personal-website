@@ -9,7 +9,7 @@ export async function getGithubInfo(): Promise<githubInfoType> {
   return null;
 }
 
-export default function githubInfo() {
+export default function useGithub() {
   const [githubInfo, setGithubInfo] = useState<githubInfoType>();
   useEffect(() => {
     getGithubInfo().then((info) => {

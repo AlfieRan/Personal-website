@@ -9,7 +9,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { techCategories } from "../../../utils/tech";
-import githubInfo from "../../../utils/hooks/github";
+import githubInfo from "../../../utils/hooks/useGithub";
 import calcDif from "../../../utils/calcTime";
 import GithubLogo from "../../extra/githubLogo";
 import fadeBetween from "../../../utils/transitions/colours";

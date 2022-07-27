@@ -131,7 +131,7 @@ const SummerMaths = () => {
             <Center flexDir={"row"} flexWrap={"wrap"}>
               <Center flexDir={"column"} flexWrap={"wrap"}>
                 <Text fontSize={"md"}>Question</Text>
-                <Image src={question.q} />
+                <Image src={question.q} alt={question.name + "question"} />
               </Center>
               <Center
                 hidden={!showState.answers}
@@ -139,7 +139,7 @@ const SummerMaths = () => {
                 flexWrap={"wrap"}
               >
                 <Text fontSize={"md"}>Answer</Text>
-                <Image src={question.a} />
+                <Image src={question.a} alt={question.name + "answer"} />
               </Center>
             </Center>
           </Center>

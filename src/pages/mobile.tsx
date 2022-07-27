@@ -29,7 +29,7 @@ const Mobile = () => {
         console.log(err);
       });
     }
-  }, [mode]);
+  }, [mode, router]);
 
   return (
     <Box h={"100vh"} textAlign={"center"} overflowY={"scroll"}>

@@ -1,5 +1,5 @@
 import { Button, Center, Flex, Link, Text } from "@chakra-ui/react";
-import { activeState, stateTypes } from "../../pages/new";
+import { activeState, stateTypes } from "../../pages";
 import GithubLogo from "../extra/githubLogo";
 import TwitterLogo from "../extra/twitterLogo";
 import YoutubeLogo from "../extra/youtubeLogo";

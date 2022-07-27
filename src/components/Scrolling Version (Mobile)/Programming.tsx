@@ -10,7 +10,7 @@ import {
 import GithubLogo from "../extra/githubLogo";
 import calcDif from "../../utils/calcTime";
 import { techCategories } from "../../utils/tech";
-import githubInfo from "../../utils/hooks/github";
+import githubInfo from "../../utils/hooks/useGithub";
 import fadeBetween from "../../utils/transitions/colours";
 
 const Programming_Scrolling = () => {
