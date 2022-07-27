@@ -1,4 +1,4 @@
-import { Center, Flex, SimpleGrid, Text } from "@chakra-ui/react";
+import { Center, Flex, Grid, Text } from "@chakra-ui/react";
 import SingleProject from "../../extra/singleProject";
 
 const Projects = () => {
@@ -45,7 +45,7 @@ const Projects = () => {
         </Text>
       </Flex>
       <Center flexDir={"row"} flexWrap={"wrap"}>
-        <SimpleGrid>
+        <Grid>
           {Projects.map((project) => (
             <Flex key={project.title}>
               <SingleProject
@@ -56,7 +56,7 @@ const Projects = () => {
               />
             </Flex>
           ))}
-        </SimpleGrid>
+        </Grid>
       </Center>
     </Center>
   );

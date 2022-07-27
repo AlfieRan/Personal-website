@@ -13,7 +13,7 @@ import { techCategories } from "../../utils/tech";
 import githubInfo from "../../utils/hooks/github";
 import fadeBetween from "../../utils/transitions/colours";
 
-const Programming = () => {
+const Programming_Scrolling = () => {
   const githubData = githubInfo();
   return (
     <>
@@ -142,4 +142,4 @@ const Programming = () => {
   );
 };
 
-export default Programming;
+export default Programming_Scrolling;

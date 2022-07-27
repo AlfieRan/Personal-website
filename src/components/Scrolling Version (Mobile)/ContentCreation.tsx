@@ -1,6 +1,6 @@
 import { Center, Flex, Image, Link, Text } from "@chakra-ui/react";
 
-const ContentCreation = () => (
+const ContentCreation_Scrolling = () => (
   <>
     <Center minH={"100vh"} flexWrap={"wrap"} mt={"10vh"}>
       <Flex flexDir={"column"} p={10} w={"lg"} maxW={"90vw"} fontSize={"md"}>
@@ -66,4 +66,4 @@ const ContentCreation = () => (
   </>
 );
 
-export default ContentCreation;
+export default ContentCreation_Scrolling;

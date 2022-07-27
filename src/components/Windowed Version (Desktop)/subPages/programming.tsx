@@ -14,13 +14,13 @@ import calcDif from "../../../utils/calcTime";
 import GithubLogo from "../../extra/githubLogo";
 import fadeBetween from "../../../utils/transitions/colours";
 
-const Programming = () => {
+const Programming_Window = () => {
   const githubData = githubInfo();
   return (
     <Center px={"lg"} flexDir={"column"}>
-      <Flex flexDir={"column"} textAlign={"left"} maxW={"85vw"} mr={"15px"}>
+      <Flex flexDir={"column"} textAlign={"left"} maxW={"85vw"} mx={"15px"}>
         <Flex mb={5} flexDir={"column"} w={"xl"} fontSize={"sm"} maxW={"85vw"}>
-          <Text fontSize={"4xl"}>Programming</Text>
+          <Text fontSize={"2xl"}>Programming</Text>
           <Text mb={2}>
             I started my programming journey with an arduino nano, an old laptop
             and a lot of creativity.
@@ -68,26 +68,33 @@ const Programming = () => {
       </Flex>
       <Link
         isExternal
-        p={"15px"}
+        px={"5px"}
+        py={"10px"}
         bg={"#252323"}
         href={"https://github.com/alfieran"}
         borderRadius={"xl"}
         _hover={{ bg: "#2d2d2d" }}
         _active={{ bg: "#1a1a1a" }}
         w={"full"}
-        maxW={"500px"}
+        maxW={"600px"}
+        mt={"20px"}
       >
-        <Center w={"full"} h={"full"} justifyContent={"space-evenly"}>
+        <Center w={"full"} h={"full"} justifyContent={"space-between"}>
           <Flex
             hidden={githubInfo !== null}
-            flexDir={"column"}
+            flexDir={"row"}
             justifyContent={"space-around"}
             alignItems={"center"}
             w={"full"}
             h={"full"}
           >
-            <Text fontSize={"2xl"}>Check out my github here :)</Text>
-            <GithubLogo />
+            <Text fontSize={"lg"}>Check out my github here :)</Text>
+            <Flex alignItems={"center"}>
+              <GithubLogo size={"48"} />
+              <Text fontSize={"md"} mx={"10px"}>
+                AlfieRan
+              </Text>
+            </Flex>
           </Flex>
           <Center
             hidden={githubInfo === null}
@@ -98,7 +105,7 @@ const Programming = () => {
             h={"full"}
             fontSize={"sm"}
           >
-            <AspectRatio ratio={1} minW={"100px"} mr={"10px"}>
+            <AspectRatio ratio={1} minW={"100px"} mr={"30px"}>
               <Image
                 src={githubData?.avatar_url ?? ""}
                 w={"4xs"}
@@ -132,4 +139,4 @@ const Programming = () => {
   );
 };
 
-export default Programming;
+export default Programming_Window;

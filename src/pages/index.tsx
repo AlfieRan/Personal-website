@@ -1,45 +1,97 @@
-import { Box, Flex } from "@chakra-ui/react";
-import Name from "../components/extra/Name";
-import AboutMe from "../components/May22Version/aboutMe";
-import Programming from "../components/May22Version/Programming";
-import ContentCreation from "../components/May22Version/ContentCreation";
-import Education from "../components/May22Version/Education";
-import Contact from "../components/May22Version/Contact";
-import Projects from "../components/May22Version/Projects";
-import { useEffect } from "react";
-import useAspect from "../utils/hooks/useAspect";
+import { Center } from "@chakra-ui/react";
+import Menu from "../components/Windowed Version (Desktop)/menu";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import About_Window from "../components/Windowed Version (Desktop)/subPages/about";
+import Programming from "../components/Windowed Version (Desktop)/subPages/programming";
+import Projects from "../components/Windowed Version (Desktop)/subPages/projects";
+import sleep from "../utils/sleep";
+import { fadeIn, fadeOut } from "../utils/transitions/fader";
 import { useRouter } from "next/router";
+import ContentCreation_Window from "../components/Windowed Version (Desktop)/subPages/contentCreation";
+import Education_Window from "../components/Windowed Version (Desktop)/subPages/education";
+import useMode from "../utils/hooks/useMode";
+import Contact_Scrolling from "../components/Scrolling Version (Mobile)/Contact";
 
-const page = () => {
-  const aspect = useAspect();
+export type stateTypes =
+  | "about"
+  | "programming"
+  | "projects"
+  | "content"
+  | "education"
+  | "contact";
+export type activeState = Dispatch<SetStateAction<stateTypes>>;
+
+function parseOpacity(opacity: number): number {
+  return 1 + (opacity - 100) / 2500;
+}
+
+const Index = () => {
+  const [active, setActive] = useState<stateTypes>("about");
+  const [next, setNext] = useState<stateTypes>("about");
+  const [opacity, setOpacity] = useState<number>(100);
   const router = useRouter();
-  const subSections: { id: string; component: any }[] = [
-    { id: "Name", component: Name },
-    { id: "AboutMe", component: AboutMe },
-    { id: "Programming", component: Programming },
-    { id: "Projects", component: Projects },
-    { id: "ContentCreation", component: ContentCreation },
-    { id: "Education", component: Education },
-    { id: "Contact", component: Contact },
-  ];
+  const mode = useMode();
+  const States = {
+    about: <About_Window />,
+    programming: <Programming />,
+    projects: <Projects />,
+    content: <ContentCreation_Window />,
+    education: <Education_Window />,
+    contact: <Contact_Scrolling />,
+  };
 
   useEffect(() => {
-    if (aspect < 1.1) {
-      router.push("/").catch((err) => {
+    if (mode === "mobile") {
+      router.push("/mobile").catch((err) => {
         console.log(err);
       });
     }
-  }, [aspect]);
+  }, [mode]);
+
+  useEffect(() => {
+    const transition = async () => {
+      if (next === active) return;
+      const aim = 400;
+      console.time("transition");
+      await fadeOut(aim / 3, setOpacity);
+      await sleep(aim / 6);
+      setActive(next);
+      await sleep(aim / 6);
+      await fadeIn(aim / 3, setOpacity);
+      console.timeEnd("transition");
+      console.log("transition aim was:", aim);
+    };
+
+    transition().catch((err) => {
+      console.log(err);
+    });
+  }, [next]);
 
   return (
-    <Box h={"100vh"} textAlign={"center"} overflowY={"scroll"}>
-      {subSections.map((section) => (
-        <Flex key={section.id} mb={"5vh"} flexDir={"column"}>
-          <section.component />
-        </Flex>
-      ))}
-    </Box>
+    <Center w={"100vw"} h={"100vh"} p={3} overscrollBehavior={"none"}>
+      <Menu setState={setNext} />
+      <Center
+        maxW={"80%"}
+        minW={"60%"}
+        w={"full"}
+        h={"100%"}
+        borderWidth={1}
+        borderRightRadius={"lg"}
+        borderLeftWidth={0.5}
+      >
+        <Center
+          opacity={`${opacity}%`}
+          transform={`scale(${parseOpacity(opacity)})`}
+          overflowY={"hidden"}
+          overflowX={"hidden"}
+          h={"100%"}
+          p={"10px"}
+        >
+          {States[active]}
+        </Center>
+      </Center>
+    </Center>
   );
 };
 
-export default page;
+export default Index;

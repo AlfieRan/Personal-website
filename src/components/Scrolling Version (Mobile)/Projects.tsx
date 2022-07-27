@@ -1,7 +1,7 @@
 import { Center, Text } from "@chakra-ui/react";
 import SingleProject from "../extra/singleProject";
 
-const Projects = () => (
+const Projects_Scrolling = () => (
   <>
     <Center flexDir={"column"} minH={"100vh"} mt={"10vh"}>
       <Text fontSize={"3xl"} mb={1}>
@@ -37,4 +37,4 @@ const Projects = () => (
   </>
 );
 
-export default Projects;
+export default Projects_Scrolling;

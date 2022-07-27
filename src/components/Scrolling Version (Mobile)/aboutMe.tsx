@@ -1,6 +1,6 @@
 import { AspectRatio, Center, Image, Text } from "@chakra-ui/react";
 
-const AboutMe = () => (
+const AboutMe_Scrolling = () => (
   <>
     <Center
       minH={"80vh"}
@@ -39,4 +39,4 @@ const AboutMe = () => (
   </>
 );
 
-export default AboutMe;
+export default AboutMe_Scrolling;

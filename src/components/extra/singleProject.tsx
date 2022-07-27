@@ -15,6 +15,7 @@ const SingleProject = (props: {
       _active={{ transform: "scale(0.8)" }}
       textAlign={"center"}
       w={"full"}
+      maxW={"450px"}
     >
       <Center
         flexDir={"row"}
@@ -23,8 +24,8 @@ const SingleProject = (props: {
         bg={"#262a2c"}
         justifyContent={"space-between"}
       >
-        <Center borderLeftRadius={"lg"} h={"100%"} w={"full"}>
-          <Center maxW={"60%"} flexDir={"column"}>
+        <Center borderLeftRadius={"lg"} h={"100%"} w={"100%"}>
+          <Center flexDir={"column"} mx={"3px"}>
             <Text fontSize={"xl"} fontWeight={"semibold"}>
               {props.title}
             </Text>

@@ -1,18 +1,19 @@
 export const TechUsing: string[] = [
   "TypeScript",
   "Python",
-  "NodeJS",
+  "V lang",
+  "C#",
+  "Yarn",
   "React",
-  "NextJS",
-  "ChakraUI",
+  "Redis",
+  "PostgreSQL",
+  "Docker",
   "Express",
   "Prisma",
-  "PostgreSQL",
-  "Redis",
-  "Docker",
-  "V lang",
+  "Node JS",
+  "Next JS",
+  "ChakraUI",
   "Monorepos",
-  "C#",
 ];
 
 export const TechLearning: string[] = ["Kubernetes", "x86 Assembly", "C"];
