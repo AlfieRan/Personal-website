@@ -122,7 +122,7 @@ const Programming_Scrolling = () => {
               </Flex>
               <Image
                 src={githubData?.avatar_url ?? ""}
-                w={"4xs"}
+                w={"250px"}
                 borderRadius={"full"}
                 alt={"github avatar"}
               />
