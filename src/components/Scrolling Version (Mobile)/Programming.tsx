@@ -97,8 +97,10 @@ const Programming_Scrolling = () => {
               w={"full"}
               h={"full"}
             >
-              <Text fontSize={"2xl"}>Check out my github here :)</Text>
-              <GithubLogo />
+              <Flex mb={"5px"}>
+                <Text fontSize={"2xl"}>Check out my github here :)</Text>
+              </Flex>
+              <GithubLogo size={"128"} />
             </Flex>
             <Center
               hidden={githubInfo === null}

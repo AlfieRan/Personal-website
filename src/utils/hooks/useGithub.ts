@@ -2,11 +2,16 @@ import { githubInfoType } from "../types";
 import { useEffect, useState } from "react";
 
 export async function getGithubInfo(): Promise<githubInfoType> {
-  const info = await (await fetch("/api/github")).json();
-  if (info) {
-    return info;
+  const request = await fetch("/api/github").catch((err) => {
+    if (err) {
+      return undefined;
+    }
+  });
+  if (request !== undefined) {
+    return await request.json();
+  } else {
+    return null;
   }
-  return null;
 }
 
 export default function useGithub() {
