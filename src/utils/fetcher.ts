@@ -1,18 +1,12 @@
 import { ApiResponse, ErrorResponse, Method, SuccessResponse } from "./types";
+import axios from "axios";
 
 export async function fetcher<T>(
-  method: Method,
-  endpoint: string,
-  body?: unknown
+  endpoint: string
 ): Promise<SuccessResponse<T>> {
-  const request = await fetch(`${endpoint}`, {
-    method,
-    credentials: "include",
-    headers: body ? { "Content-Type": "application/json" } : undefined,
-    body: body ? JSON.stringify(body) : undefined
-  });
+  const request = await axios.get(`${endpoint}`);
 
-  const json: ApiResponse<T> = await request.json();
+  const json: ApiResponse<T> = request.data;
 
   if (request.status >= 400 || !json.successful) {
     throw new Error(`${(json as ErrorResponse).error}`);

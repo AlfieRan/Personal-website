@@ -98,10 +98,8 @@ const SummerMaths = () => {
         wrap={"wrap"}
         mb={5}
       >
-        <Flex px={3} py={2}>
-          <Link href={"/"}>Alfie Ranstead</Link>
-          <Text mx={5}>Time Left: {timeParser(maxTime - Timer.time)}</Text>
-        </Flex>
+        <Link href={"/"}>Alfie Ranstead</Link>
+        <Text mx={5}>Time Left: {timeParser(maxTime - Timer.time)}</Text>
         <Flex alignItems={"center"} py={2}>
           <Button
             css={basicButton}

@@ -1,7 +1,7 @@
 import { Octokit } from "octokit";
 const enabled: boolean = process.env.DEVELOPMENT !== "true";
 
-const API_Key = process.env.API_KEY;
+const API_Key = process.env.GITHUB_API_KEY;
 const octokit = new Octokit({
   auth: API_Key,
 });

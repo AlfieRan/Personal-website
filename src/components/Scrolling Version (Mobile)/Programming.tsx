@@ -61,7 +61,7 @@ const Programming_Scrolling = () => {
                       bg={fadeBetween(
                         type.colours[0],
                         type.colours[1],
-                        techCategories.length,
+                        type.list.length,
                         id
                       )}
                       p={1}

@@ -34,7 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <SWRConfig
       value={{
         fetcher(url) {
-          return fetcher("GET", url).then((res) => res.data);
+          return fetcher(url).then((res) => res.data);
         },
         refreshInterval: 5 * 1000,
         // dedupingInterval: 120 * 1000,
