@@ -3,7 +3,7 @@ import SingleProject from "../extra/singleProject";
 
 const Projects_Scrolling = () => (
   <>
-    <Center flexDir={"column"} minH={"100vh"} mt={"10vh"}>
+    <Center flexDir={"column"} minH={"100vh"} mt={"10vh"} px={"10px"}>
       <Text fontSize={"3xl"} mb={1}>
         My Current Projects
       </Text>
