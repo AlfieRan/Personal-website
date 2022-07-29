@@ -9,7 +9,7 @@ const Component = (props: { hidden?: boolean }) => {
   const [mainTextSize, setMainTextSize] = useState<"7xl" | "5xl">("7xl");
 
   useEffect(() => {
-    if (width < breakpoint) {
+    if (width ?? breakpoint + 1 < breakpoint) {
       setMainTextSize("5xl");
     }
   }, [width]);
