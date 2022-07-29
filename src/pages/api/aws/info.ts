@@ -14,6 +14,7 @@ if (awsPoolId === undefined || bucketName === undefined) {
     IdentityPoolId: awsPoolId,
   });
   s3 = new aws.S3({
+    region: "us-east-1",
     params: { Bucket: bucketName },
   });
   loaded = true;
