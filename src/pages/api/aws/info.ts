@@ -54,6 +54,19 @@ export default async function awsS3Bucket(req: any, res: any) {
   }
 }
 
+const fileExtensions = ["png", "jpg", "jpeg", "gif"];
+
 function parseFiles(obj: any) {
-  return obj.Contents?.map((item: any) => item.Key);
+  const output: string[] = [];
+
+  obj.Contents?.forEach((item: any) => {
+    const splitElement = item.Key.split(".");
+    if (splitElement !== undefined && splitElement.length > 1) {
+      const extension = splitElement[splitElement.length - 1];
+      if (fileExtensions.includes(extension)) {
+        output.push(item.Key);
+      }
+    }
+  });
+  return output;
 }
