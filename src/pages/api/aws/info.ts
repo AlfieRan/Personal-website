@@ -25,7 +25,12 @@ export default async function awsS3Bucket(req: any, res: any) {
       { Prefix: "SummerMaths", Bucket: bucketName },
       (err: any, data: any) => {
         if (err) {
-          console.log(err);
+          console.log(
+            err,
+            "\n\nErrored using poolId and BucketId of:",
+            awsPoolId,
+            bucketName
+          );
           res.status(500).send(err);
         } else {
           const bucketUrl = `https://${bucketName}.s3.amazonaws.com/`;

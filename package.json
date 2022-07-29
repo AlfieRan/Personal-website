@@ -30,6 +30,7 @@
   },
   "scripts": {
     "lint": "yarn next lint",
-    "dev": "yarn next dev"
+    "dev": "yarn next dev",
+    "build": "yarn next build"
   }
 }
