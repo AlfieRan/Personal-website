@@ -1,4 +1,5 @@
 import aws from "aws-sdk";
+import { dictType_Math } from "../../../utils/types/mathsTypes";
 
 // Config Constants Declared here
 let loaded = false;
@@ -91,14 +92,10 @@ function parseFiles(obj: any) {
     return output;
 }
 
-type objType = {
-    chapters: { name: string; questions: { name: string; path: string }[] }[];
-};
-
-function parseObj(data: string[]): objType {
+function parseObj(data: string[]): dictType_Math {
     // input data should be an array of file paths
 
-    const output: objType = { chapters: [] }; // init object to return
+    const output: dictType_Math = { chapters: [] }; // init object to return
 
     data.forEach((item: string) => {
         // for each file
@@ -112,7 +109,7 @@ function parseObj(data: string[]): objType {
                 // ensure file has an extension and a name
                 const questionNumber = questionSplit[0]; // get name from init of array
                 const chapterIndex = output.chapters.findIndex(
-                    (item) => item.name === chapter
+                    (item: any) => item.name === chapter
                 ); // get chapter index from pre-existing output object
 
                 const questionObj = {

@@ -1,16 +1,21 @@
-import { ApiResponse, ErrorResponse, Method, SuccessResponse } from "./types";
+import {
+    ApiResponse,
+    ErrorResponse,
+    Method,
+    SuccessResponse,
+} from "./types/types";
 import axios from "axios";
 
-export async function fetcher<T>(
-  endpoint: string
-): Promise<SuccessResponse<T>> {
-  const request = await axios.get(`${endpoint}`);
+export async function fetcher<T>(endpoint: string): Promise<T> {
+    console.log("attempting to fetch");
+    const request = await axios.get(`${endpoint}`);
 
-  const json: ApiResponse<T> = request.data;
+    const json: T = request.data;
 
-  if (request.status >= 400 || !json.successful) {
-    throw new Error(`${(json as ErrorResponse).error}`);
-  }
+    if (request.status >= 400 || !json) {
+        throw new Error(`${(request.data as ErrorResponse).error}`);
+    }
 
-  return json;
+    console.log("fetcher:", json);
+    return json;
 }
