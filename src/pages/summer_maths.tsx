@@ -86,7 +86,7 @@ const SummerMaths = () => {
     const [curQuestions, setCurQuestions] = useState<question[]>(
         getQuestions()
     );
-    const [showState, setShowState] = useState<showState>({ starting: true });
+    const [showState, setShowState] = useState<showState>({ questions: true });
     const Timer = useTimer();
     const maxTime = 60 * 60;
 

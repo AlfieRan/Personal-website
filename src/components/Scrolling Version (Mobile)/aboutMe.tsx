@@ -29,7 +29,7 @@ const AboutMe_Scrolling = () => (
       </Center>
       <AspectRatio ratio={1} w={["2xs", "xs", "sm", "md"]}>
         <Image
-          src={"/me/me_in_car.png"}
+          src={"/me/me in france.jpg"}
           objectFit={"cover"}
           borderRadius={"full"}
           alt={"A photo of me"}

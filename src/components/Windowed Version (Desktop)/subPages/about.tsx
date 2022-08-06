@@ -17,15 +17,15 @@ const About_Window = () => (
       maxW={"800px"}
       w={"100%"}
       mb={"20px"}
-      maxH={"250px"}
+      maxH={"300px"}
       overflow={"hidden"}
     >
       <Image
-        src={"/me/me_in_car.png"}
+        src={"/me/me in france.jpg"}
         objectFit={"cover"}
-        objectPosition={"0 35%"}
+        objectPosition={"0 60%"}
         borderRadius={"xl"}
-        alt={"A photo of me in my car"}
+        alt={"A photo of me on holiday in france"}
         w={"full"}
       />
     </AspectRatio>
