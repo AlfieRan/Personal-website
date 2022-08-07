@@ -5,7 +5,7 @@ import { question, showState } from "../../../utils/types/mathsTypes";
 import useTimer from "../../../utils/time/timer";
 import PlainButton from "../extra/button";
 import { StateManager } from "../../../utils/types/types";
-import getQuestions from "../../../utils/getQuestions";
+import getQuestions from "../../../utils/hooks/getQuestions";
 
 const Main = (props: {
     setState: StateManager<showState>;

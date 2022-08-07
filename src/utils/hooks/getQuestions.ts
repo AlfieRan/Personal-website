@@ -1,7 +1,7 @@
-import { question } from "./types/mathsTypes";
-import useAWS from "./hooks/mathTool/useAWS";
+import { question } from "../types/mathsTypes";
+import useAWS from "./mathTool/useAWS";
 
-function getQuestions() {
+function useQuestions() {
     const info = useAWS();
 
     const newQuestions: question[] = [];
@@ -18,4 +18,4 @@ function getQuestions() {
     return newQuestions;
 }
 
-export default getQuestions;
+export default useQuestions;
