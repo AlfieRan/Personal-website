@@ -1,51 +1,64 @@
-import { useEffect, useState } from "react";
-import sleep from "./sleep";
+import { useState } from "react";
 
-export default function useTimer() {
-    const [time, setTime] = useState(0);
-    const [isRunning, setIsRunning] = useState<boolean>(false);
-    const [lastTick, setLastTick] = useState(new Date().getTime());
+export type Timer = {
+    time: number;
+    Start: () => void;
+    Pause: () => void;
+    Restart: () => void;
+};
 
-    function start() {
-        setIsRunning(true);
-        sleep(500).then(() => {
-            console.log(isRunning);
-            tick();
-        });
+export default function useTimer(): Timer {
+    const [launched, setLaunched] = useState<boolean>(false);
+    const [running, setRunning] = useState<boolean>(false);
+
+    const [originTime, setOriginTime] = useState<number>(0);
+    const [timeSpentPaused, setTimeSpentPaused] = useState<number>(0);
+    const [lastPause, setLastPause] = useState<number>(0);
+
+    const [time, setTime] = useState<number>(0);
+
+    function init() {
+        setTimeSpentPaused(0);
+        setOriginTime(Date.now());
+        setLaunched(true);
+        setRunning(true);
     }
 
-    function pause() {
-        setIsRunning(false);
+    function Restart() {
+        init();
     }
 
-    function stop() {
-        setIsRunning(false);
-        setTime(0);
-    }
-
-    function tick() {
-        console.log(isRunning);
-        if (!isRunning) {
-            console.log("timer is not running");
-            return;
-        } else if (new Date().getTime() - lastTick > 1000) {
-            setTime(time + 1);
-            setLastTick(new Date().getTime());
-            console.log("tick", time);
+    function Start() {
+        if (!launched) {
+            init();
         }
-        sleep(1000).then(() => {
-            tick();
-        });
+
+        if (!running) {
+            // gets skipped if just init cause init sets running to true
+            setTimeSpentPaused(timeSpentPaused + (Date.now() - lastPause));
+            setRunning(true);
+        }
     }
 
-    useEffect(() => {
-        console.log("isRunning was updated: ", isRunning);
-    }, [isRunning]);
+    function Pause() {
+        if (running) {
+            setLastPause(Date.now());
+            setRunning(false);
+        }
+    }
+
+    function getTime() {
+        return Date.now() - (originTime + timeSpentPaused);
+    }
+
+    setInterval(() => {
+        setTime(getTime());
+    }, 250);
 
     return {
         time,
-        start,
-        pause,
-        stop,
+        Start,
+        Pause,
+        Restart,
     };
 }

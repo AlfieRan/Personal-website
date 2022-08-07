@@ -1,54 +1,58 @@
+import { Dispatch, SetStateAction } from "react";
+
 export interface UserInfo {
-  received: boolean;
-  name: string;
-  id: string;
+    received: boolean;
+    name: string;
+    id: string;
 }
 
 export type Method = "GET" | "POST" | "DELETE" | "PUT" | "PATCH";
 
 export type ApiResponse<T> = SuccessResponse<T> | ErrorResponse;
 
+export type StateManager<T> = Dispatch<SetStateAction<T>>;
+
 export interface SuccessResponse<T> {
-  successful: true;
-  data: T;
+    successful: true;
+    data: T;
 }
 
 export interface ErrorResponse {
-  successful: false;
-  error: string;
+    successful: false;
+    error: string;
 }
 
 export type MessageInfo = {
-  id: string;
-  content: string;
-  sender: { id: string; name: string };
+    id: string;
+    content: string;
+    sender: { id: string; name: string };
 };
 
 export type returnAddressType = hasAddress | noAddress;
 
 interface hasAddress {
-  hasAddress: true;
-  Address: string;
+    hasAddress: true;
+    Address: string;
 }
 interface noAddress {
-  hasAddress: false;
+    hasAddress: false;
 }
 
 export type UserLogging = UserIsLogging | UserIsntLogging;
 
 interface UserIsLogging {
-  logged: true;
-  name: string;
+    logged: true;
+    name: string;
 }
 interface UserIsntLogging {
-  logged: false;
+    logged: false;
 }
 
 export type githubInfoType = null | {
-  username: string;
-  avatar_url: string;
-  public_repos: number;
-  private_repos: number;
-  followers: number;
-  following: number;
+    username: string;
+    avatar_url: string;
+    public_repos: number;
+    private_repos: number;
+    followers: number;
+    following: number;
 };
