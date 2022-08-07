@@ -11,7 +11,7 @@ export default function useTimer(): Timer {
     const [launched, setLaunched] = useState<boolean>(false);
     const [running, setRunning] = useState<boolean>(false);
 
-    const [originTime, setOriginTime] = useState<number>(0);
+    const [originTime, setOriginTime] = useState<number>();
     const [timeSpentPaused, setTimeSpentPaused] = useState<number>(0);
     const [lastPause, setLastPause] = useState<number>(0);
 
@@ -22,6 +22,7 @@ export default function useTimer(): Timer {
         setOriginTime(Date.now());
         setLaunched(true);
         setRunning(true);
+        console.log("Init:", originTime);
     }
 
     function Restart() {
@@ -48,11 +49,16 @@ export default function useTimer(): Timer {
     }
 
     function getTime() {
-        return Date.now() - (originTime + timeSpentPaused);
+        if (originTime) {
+            return (Date.now() - (originTime + timeSpentPaused)) / 1000;
+        }
     }
 
     setInterval(() => {
-        setTime(getTime());
+        const newTime = getTime();
+        if (newTime) {
+            setTime(newTime);
+        }
     }, 250);
 
     return {
