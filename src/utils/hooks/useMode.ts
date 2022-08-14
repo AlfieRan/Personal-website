@@ -17,7 +17,7 @@ export default function useMode() {
             height !== undefined &&
             width !== undefined
         ) {
-            if (aspect < 1.1 || aspect > 2 || height < 750 || width < 920) {
+            if (aspect < 1.1 || height < 750 || width < 920) {
                 console.log("Mobile:", aspect, height);
                 setMode("mobile");
             } else {
