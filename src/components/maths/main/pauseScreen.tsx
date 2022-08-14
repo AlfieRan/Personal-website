@@ -19,7 +19,7 @@ const PauseScreen = (props: {
             <PlainButton
                 contents={"Resume"}
                 fn={() => {
-                    props.stateManager({ questions: true });
+                    props.stateManager("questions");
                     props.Timer.Start();
                 }}
             />
