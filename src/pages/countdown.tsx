@@ -1,5 +1,6 @@
-import { Center, Flex, Text } from "@chakra-ui/react";
+import { Box, Center, Flex, Text } from "@chakra-ui/react";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Page() {
     const theEnd = 1665136038803;
@@ -20,7 +21,24 @@ export default function Page() {
 
     return (
         <Center w={"100vw"} h={"100vh"} p={"50px"}>
-            <Text>{daysLeft} Days left.</Text>
+            {daysLeft > 0 ? (
+                <Text>{daysLeft} Days left.</Text>
+            ) : (
+                <Center w={"100%"} h={"100%"}>
+                    <Box
+                        position={"absolute"}
+                        w={"100%"}
+                        h={"100%"}
+                        opacity={"25%"}
+                        zIndex={0}
+                    >
+                        <Image src={"/countdown/bg.jpg"} layout={"fill"} />
+                    </Box>
+                    <Center zIndex={1}>
+                        <Text fontSize={"5xl"}>Time's up 😈</Text>
+                    </Center>
+                </Center>
+            )}
         </Center>
     );
 }
