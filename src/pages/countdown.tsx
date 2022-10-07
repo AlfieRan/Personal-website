@@ -35,7 +35,7 @@ export default function Page() {
                         <Image src={"/countdown/bg.jpg"} layout={"fill"} />
                     </Box>
                     <Center zIndex={1}>
-                        <Text fontSize={"5xl"}>Time's up 😈</Text>
+                        <Text fontSize={"5xl"}>Time&apos;s up 😈</Text>
                     </Center>
                 </Center>
             )}
