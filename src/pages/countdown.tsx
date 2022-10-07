@@ -1,15 +1,18 @@
-import { Box, Center, Text } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { Box, Button, Center, Text } from "@chakra-ui/react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import sleep from "../utils/time/sleep";
 
-const files = ["/countdown/laughing.mp3", "/countdown/bell.mp3"];
+const files = [
+    "/countdown/laughing.mp3",
+    "/countdown/bell.mp3",
+    "/countdown/letmein.mp3",
+];
 
 export default function Page() {
     const theEnd = 1665136038803;
     const msInDay = 1000 * 60 * 60 * 24;
-    const initialTimeBetween = 2500;
-    const [running, setRunning] = useState(true);
+    const initialTimeBetween = 1500;
 
     function getDaysUntilEnd() {
         return (
@@ -17,6 +20,8 @@ export default function Page() {
             100000
         );
     }
+
+    const [daysLeft, setDaysLeft] = useState(getDaysUntilEnd());
 
     function newAudio() {
         try {
@@ -36,8 +41,6 @@ export default function Page() {
         }
     }
 
-    const [daysLeft, setDaysLeft] = useState(getDaysUntilEnd());
-
     setInterval(() => {
         setDaysLeft(getDaysUntilEnd());
     }, 100);
@@ -46,19 +49,14 @@ export default function Page() {
         newAudio();
         (async () => {
             let timeBetween = initialTimeBetween;
+            let running = true;
             while (running) {
                 await sleep(timeBetween);
                 newAudio();
-                timeBetween = timeBetween * 0.9;
-                console.log(
-                    "time between audio:",
-                    timeBetween,
-                    "should next be",
-                    timeBetween * 0.9
-                );
+                console.log("time between audio:", timeBetween);
 
-                if (timeBetween < 10) {
-                    setRunning(false);
+                if (timeBetween > 5) {
+                    timeBetween = timeBetween * 0.9;
                 }
             }
         })();
@@ -79,7 +77,7 @@ export default function Page() {
                     >
                         <Image src={"/countdown/bg.jpg"} layout={"fill"} />
                     </Box>
-                    <Box position={"absolute"} bottom={5} zIndex={1}>
+                    <Box position={"absolute"} bottom={5} zIndex={10}>
                         <Text fontSize={"min(200px, 15vw)"}>
                             Time&apos;s up 😈
                         </Text>
