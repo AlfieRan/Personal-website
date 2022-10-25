@@ -148,7 +148,7 @@ export default function Visualiser() {
                 py={2}
             >
                 <Text textAlign={"center"} fontWeight={"semibold"}>
-                    Visualise a number using Emojis
+                    Visualise numbers using Emojis
                 </Text>
                 <Text
                     textAlign={"center"}
