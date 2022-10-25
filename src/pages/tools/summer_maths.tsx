@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Center, Link, Text } from "@chakra-ui/react";
-import useAWS from "../utils/hooks/mathTool/useAWS";
-import { showState } from "../utils/types/mathsTypes";
-import Menu from "../components/maths/menu/menu";
-import Main from "../components/maths/main/main";
+import useAWS from "../../utils/hooks/mathTool/useAWS";
+import { showState } from "../../utils/types/mathsTypes";
+import Menu from "../../components/maths/menu/menu";
+import Main from "../../components/maths/main/main";
 
 const SummerMaths = () => {
     const info = useAWS();
