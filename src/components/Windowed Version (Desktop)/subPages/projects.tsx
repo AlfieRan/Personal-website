@@ -1,13 +1,17 @@
 import { Center, Flex, Grid, Text } from "@chakra-ui/react";
 import SingleProject from "../../extra/singleProject";
+import { useState } from "react";
+import Visualiser from "../../../pages/tools/visualiser";
+
+type ProjectType = {
+    title: string;
+    info: string;
+    image: string;
+    link: string;
+};
 
 const Projects = () => {
-    const Projects: {
-        title: string;
-        info: string;
-        image: string;
-        link: string;
-    }[] = [
+    const Projects: ProjectType[] = [
         {
             title: "Mutuals.Chat",
             info: "Find friends who have similar interests and video chat with them!",

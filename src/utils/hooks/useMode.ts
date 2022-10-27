@@ -15,7 +15,7 @@ export default function useMode() {
             localStorage = raw;
         }
     } catch (e) {
-        console.log("Error: localStorage is not available.", e);
+        console.log("Error: localStorage is not available.");
     }
 
     const aspect = useAspect();
