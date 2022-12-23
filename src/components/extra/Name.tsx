@@ -1,4 +1,4 @@
-import { Center, Text } from "@chakra-ui/react";
+import { Center, Flex, Spacer, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import calcDif from "../../utils/time/calcTime";
 import useWidth from "../../utils/hooks/window/useWidth";
@@ -20,7 +20,8 @@ const Component = (props: { hidden?: boolean }) => {
     }
     return (
         <>
-            <Center h={"90vh"} flexDir={"column"} textAlign={"center"} px={2}>
+            <Flex h={"35vh"} />
+            <Center flexDir={"column"} textAlign={"center"} px={2}>
                 <Text fontSize={mainTextSize}>Alfie Ranstead</Text>
                 <Text fontSize={"lg"}>
                     A {calcDif(2005, 4, 5)} Year old Computer Scientist.{" "}
@@ -28,6 +29,7 @@ const Component = (props: { hidden?: boolean }) => {
                 <Sponsor />
             </Center>
             <Center h={"10vh"}>^ Swipe Up ^</Center>
+            <Flex h={"40vh"} />
         </>
     );
 };

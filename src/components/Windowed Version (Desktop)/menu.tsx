@@ -5,6 +5,7 @@ import TwitterLogo from "../extra/twitterLogo";
 import YoutubeLogo from "../extra/youtubeLogo";
 import calcDif from "../../utils/time/calcTime";
 import Sponsor from "../extra/Sponsor";
+import Socials from "../extra/Socials";
 
 const Menu = (props: { setState: activeState }) => {
     const buttons: {
@@ -37,24 +38,6 @@ const Menu = (props: { setState: activeState }) => {
         {
             title: "Contact",
             component: "contact",
-        },
-    ];
-
-    const Socials: { component: any; alt: string; link: string }[] = [
-        {
-            alt: "Github",
-            component: GithubLogo,
-            link: "https://github.com/alfieran",
-        },
-        {
-            alt: "Twitter",
-            component: TwitterLogo,
-            link: "https://twitter.com/alfieranstead",
-        },
-        {
-            alt: "Youtube",
-            component: YoutubeLogo,
-            link: "https://youtube.com/c/unofedeo",
         },
     ];
 
@@ -100,19 +83,7 @@ const Menu = (props: { setState: activeState }) => {
                     </Button>
                 ))}
             </Center>
-            <Center w={"100%"} h={"20%"} flexWrap={"wrap"} px={"10px"}>
-                {Socials.map((social) => (
-                    <Flex
-                        key={social.alt}
-                        _hover={{ transform: "scale(1.1)" }}
-                        _active={{ transform: "scale(0.9)" }}
-                    >
-                        <Link href={social.link} mx={"5px"} px={"5px"}>
-                            <social.component size={"32"} />
-                        </Link>
-                    </Flex>
-                ))}
-            </Center>
+            <Socials />
         </Flex>
     );
 };

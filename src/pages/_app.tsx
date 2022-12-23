@@ -5,6 +5,7 @@ import { extendTheme } from "@chakra-ui/react";
 import { SWRConfig } from "swr";
 import { fetcher } from "../utils/fetcher";
 import Head from "next/head";
+import "tailwindcss/tailwind.css";
 
 const theme = extendTheme({
     styles: {

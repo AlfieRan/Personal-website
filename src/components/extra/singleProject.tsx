@@ -1,4 +1,4 @@
-import { AspectRatio, Center, Flex, Link, Text } from "@chakra-ui/react";
+import { AspectRatio, Center, Link, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
 const SingleProject = (props: {
