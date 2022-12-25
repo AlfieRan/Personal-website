@@ -1,69 +1,58 @@
-import { AspectRatio, Center, Link, Text } from "@chakra-ui/react";
-import Image from "next/image";
+import { Flex, Link, Text } from "@chakra-ui/react";
+import { projectType, tagColors } from "../../utils/types/projects";
 
-const SingleProject = (props: {
-    title: string;
-    info: string;
-    image: string;
-    link: string;
-}) => {
-    const middle = (
-        <Center
-            flexDir={"row"}
-            borderWidth={1}
-            borderRadius={"lg"}
-            bg={"#262a2c"}
-            justifyContent={"space-between"}
-            maxW={"inherit"}
-        >
-            <Center borderLeftRadius={"lg"} h={"100%"} w={"100%"}>
-                <Center flexDir={"column"} mx={"3px"}>
-                    <Text fontSize={"xl"} fontWeight={"semibold"}>
-                        {props.title}
-                    </Text>
-                    <Text px={2} fontSize={"sm"}>
-                        {props.info}
-                    </Text>
-                </Center>
-            </Center>
-            <Center
-                borderRightRadius={"lg"}
-                bg={"#525252"}
-                minW={"200px"}
-                w={"30%"}
-            >
-                <AspectRatio
-                    ratio={1}
-                    h={"100%"}
-                    w={"100%"}
-                    borderRightRadius={"lg"}
-                    overflow={"hidden"}
-                    borderWidth={1}
-                >
-                    <Image
-                        src={props.image}
-                        layout={"fill"}
-                        alt={`Project image for ${props.title}`}
-                    />
-                </AspectRatio>
-            </Center>
-        </Center>
-    );
-
+export default function SingleProject(props: { project: projectType }) {
     return (
         <Link
             isExternal
-            href={props.link}
-            transform={"scale(0.9)"}
-            _hover={{ transform: "scale(0.95)" }}
-            _active={{ transform: "scale(0.85)" }}
-            textAlign={"center"}
-            w={"full"}
+            href={props.project.link}
+            _hover={{ transform: "scale(1.02)" }}
+            _active={{ transform: "scale(0.98)" }}
+            w={"100%"}
             maxW={"450px"}
+            bg={"whiteAlpha.200"}
+            px={"10px"}
+            py={"5px"}
+            m={"7px"}
+            borderRadius={"10px"}
+            borderWidth={1}
+            borderColor={"whiteAlpha.400"}
+            display={"flex"}
+            justifyContent={"flex-start"}
         >
-            {middle}
+            <Flex flexDir={"column"} textAlign={"left"}>
+                <Text
+                    fontSize={{ base: "xl", md: "lg" }}
+                    fontWeight={"semibold"}
+                >
+                    {props.project.title}
+                </Text>
+                <Text fontSize={{ base: "md", md: "xs" }}>
+                    {props.project.info}
+                </Text>
+                <Flex
+                    flexDir={"row"}
+                    wrap={"wrap"}
+                    mt={"10px"}
+                    justifyContent={"flex-start"}
+                >
+                    {props.project.tags.map((tag, index) => (
+                        <Flex
+                            key={index + props.project.title + "tag"}
+                            bg={tag in tagColors ? tagColors[tag] : "gray"}
+                            borderRadius={"5px"}
+                            my={"3px"}
+                            mr={"8px"}
+                            px={"5px"}
+                            py={"2px"}
+                        >
+                            <Text fontSize={{ base: "12px", md: "15px" }}>
+                                {tag}
+                            </Text>
+                        </Flex>
+                    ))}
+                </Flex>
+            </Flex>
         </Link>
     );
-};
-
-export default SingleProject;
+}

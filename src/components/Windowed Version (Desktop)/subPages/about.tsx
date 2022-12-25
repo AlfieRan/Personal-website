@@ -4,11 +4,14 @@ import Image from "next/image";
 const About_Window = () => (
     <Center
         w={"100%"}
+        minW={"100%"}
         h={"100%"}
         textAlign={"center"}
         fontSize={"md"}
         p={"5px"}
         flexDir={"column"}
+        alignItems={"center"}
+        justifyContent={"center"}
     >
         <Text fontSize={"40px"} mb={"20px"}>
             Hi, I&apos;m Alfie Ranstead!

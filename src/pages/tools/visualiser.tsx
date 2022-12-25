@@ -76,7 +76,7 @@ export default function Visualiser() {
                 textAlign={"center"}
             >
                 <Text w={"full"}>
-                    {Math.round((percentScrolled * quantity) / 100)} /{" "}
+                    {Math.floor((percentScrolled * quantity) / 100)} /{" "}
                     {quantity}
                 </Text>
             </Flex>

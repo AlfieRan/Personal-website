@@ -12,7 +12,7 @@ const theme = extendTheme({
         global: {
             "html, body": {
                 color: "#FFFFFF",
-                bg: "DarkGrey",
+                bg: "DarkerGrey",
                 fontSize: ["sm", "md", "lg", "xl"],
                 overscrollBehavior: "none",
             },
@@ -23,6 +23,7 @@ const theme = extendTheme({
         LightGrey: "#7a7a7a",
         MidGrey: "#282828",
         DarkGrey: "#161616",
+        DarkerGrey: "#0f0f0f",
         DarkBlue: "#1B263B",
         MidBlue: "#285883",
         LightBlue: "#3993DD",

@@ -1,4 +1,4 @@
-import { Center } from "@chakra-ui/react";
+import { Center, Flex } from "@chakra-ui/react";
 import Menu from "../components/Windowed Version (Desktop)/menu";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import About_Window from "../components/Windowed Version (Desktop)/subPages/about";
@@ -70,26 +70,28 @@ const Index = () => {
     return (
         <Center w={"100vw"} h={"100vh"} p={3} overscrollBehavior={"none"}>
             <Menu setState={setNext} />
-            <Center
+            <Flex
                 maxW={"80%"}
                 minW={"60%"}
                 w={"full"}
                 h={"100%"}
                 borderWidth={1}
                 borderRightRadius={"lg"}
+                borderColor={"whiteAlpha.300"}
                 borderLeftWidth={0.5}
             >
-                <Center
+                <Flex
                     opacity={`${opacity}%`}
                     transform={`scale(${parseOpacity(opacity)})`}
                     overflowY={"hidden"}
                     overflowX={"hidden"}
                     h={"100%"}
                     p={"10px"}
+                    w={"100%"}
                 >
                     {States[active]}
-                </Center>
-            </Center>
+                </Flex>
+            </Flex>
         </Center>
     );
 };

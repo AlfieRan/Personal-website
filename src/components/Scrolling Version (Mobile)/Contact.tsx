@@ -11,12 +11,16 @@ const Contact_Scrolling = () => {
             link: "mailto:hi@alfieranstead.com",
         },
         {
+            name: "Linkedin - Alfie Ranstead",
+            link: "https://www.linkedin.com/in/alfie-ranstead-661064225/",
+        },
+        {
             name: "Discord - Uno#6088",
         },
     ];
 
     return (
-        <Center minH={"100vh"} flexDir={"column"}>
+        <Center minH={"100vh"} w={"100%"} flexDir={"column"}>
             <Text fontSize={"4xl"}>Contact Me</Text>
             <Center flexDir={"column"} fontSize={"lg"}>
                 {ContactItems.map((item) => {

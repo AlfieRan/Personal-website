@@ -17,7 +17,7 @@ import fadeBetween from "../../../utils/transitions/colours";
 const Programming_Window = () => {
     const githubData = githubInfo();
     return (
-        <Center px={"lg"} flexDir={"column"}>
+        <Center px={"lg"} flexDir={"column"} w={"100%"}>
             <Flex
                 flexDir={"column"}
                 textAlign={"left"}
