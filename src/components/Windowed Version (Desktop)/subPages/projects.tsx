@@ -12,8 +12,9 @@ const Projects = () => {
             overflowX={"hidden"}
             p={"10px"}
             alignItems={"flex-start"}
+            justifyContent={"center"}
         >
-            <Flex flexDir={"column"} textAlign={"left"} mb={"10px"}>
+            <Flex flexDir={"column"} textAlign={"left"} mb={"20px"}>
                 <Text fontSize={"2xl"}>My Recent Projects</Text>
                 <Text fontSize={"md"}>
                     I am constantly creating new projects so here&apos;s just a
