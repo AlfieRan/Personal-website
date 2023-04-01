@@ -1,5 +1,5 @@
-import { Box, Button, Center, Text } from "@chakra-ui/react";
-import { useEffect, useRef, useState } from "react";
+import { Box, Center, Text } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import sleep from "../utils/time/sleep";
 
@@ -10,7 +10,7 @@ const files = [
 ];
 
 export default function Page() {
-    const theEnd = 1665136038803;
+    const theEnd = 1680508800000;
     const msInDay = 1000 * 60 * 60 * 24;
     const initialTimeBetween = 1500;
 
@@ -45,29 +45,29 @@ export default function Page() {
         setDaysLeft(getDaysUntilEnd());
     }, 100);
 
-    useEffect(() => {
-        newAudio();
-        (async () => {
-            let timeBetween = initialTimeBetween;
-            let running = true;
-            while (running) {
-                await sleep(timeBetween);
-                newAudio();
-                console.log("time between audio:", timeBetween);
-
-                if (timeBetween > 5) {
-                    timeBetween = timeBetween * 0.9;
-                }
-            }
-        })();
-    }, []);
+    // useEffect(() => {
+    //     newAudio();
+    //     (async () => {
+    //         let timeBetween = initialTimeBetween;
+    //         let running = true;
+    //         while (running) {
+    //             await sleep(timeBetween);
+    //             newAudio();
+    //             console.log("time between audio:", timeBetween);
+    //
+    //             if (timeBetween > 5) {
+    //                 timeBetween = timeBetween * 0.9;
+    //             }
+    //         }
+    //     })();
+    // }, []);
 
     return (
         <Center w={"100vw"} h={"100vh"} p={"50px"}>
             {daysLeft > 0 ? (
                 <Text>{daysLeft} Days left.</Text>
             ) : (
-                <Center w={"100%"} h={"100%"}>
+                <Center w={"100%"} h={"100%"} bg={"white"}>
                     <Box
                         position={"absolute"}
                         w={"100%"}
@@ -75,9 +75,14 @@ export default function Page() {
                         opacity={"100%"}
                         zIndex={0}
                     >
-                        <Image src={"/countdown/bg.jpg"} layout={"fill"} />
+                        <Image src={"/countdown/elo.png"} layout={"fill"} />
                     </Box>
-                    <Box position={"absolute"} bottom={5} zIndex={10}>
+                    <Box
+                        position={"absolute"}
+                        bg={"black"}
+                        bottom={5}
+                        zIndex={10}
+                    >
                         <Text fontSize={"min(200px, 15vw)"}>
                             Time&apos;s up 😈
                         </Text>
