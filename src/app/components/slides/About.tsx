@@ -35,7 +35,7 @@ export function AboutSlide({index}: Props) {
 					className={"font-bold"}>Problem Solving</span> and once I&apos;ve found a problem I care about, I&apos;ll do
 					anything to solve it.
 				</p>
-				<p>I&apos;ve  creating videos since 10, programming since 9, and striving to be the best from birth.</p>
+				<p>I&apos;ve been creating videos since 10, programming since 9, and striving to be the best from birth.</p>
 			</div>
 		</ItemWrapper>
 	)
