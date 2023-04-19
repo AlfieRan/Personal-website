@@ -3,7 +3,7 @@ import {motion, useSpring} from "framer-motion";
 
 interface Props {
 	index: number;
-	children: JSX.Element;
+	children: JSX.Element | JSX.Element[];
 	onCreate?: () => void;
 	onDestroy?: () => void;
 }
