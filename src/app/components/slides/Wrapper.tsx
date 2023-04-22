@@ -29,7 +29,7 @@ export function ItemWrapper({children, index, onCreate, onDestroy}: Props) {
 
 	return (
 		<motion.div
-			className={"flex flex-col md:flex-row w-full border-2 rounded-lg overflow-hidden"}
+			className={"flex flex-col md:flex-row w-full shadow-lg rounded-lg bg-white dark:bg-black-700 overflow-hidden"}
 			style={{x, scale}}
 			onViewportEnter={onEnter}
 			onViewportLeave={onLeave}

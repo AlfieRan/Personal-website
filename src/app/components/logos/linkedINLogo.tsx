@@ -1,6 +1,6 @@
 const LinkedLogo = (props: { size?: string }) => (
     <svg
-        fill="#ffffff"
+        fill="inherit"
         width={props.size ?? "256"}
         height={props.size ?? "256"}
         version="1.1"
