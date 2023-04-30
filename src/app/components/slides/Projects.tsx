@@ -31,7 +31,7 @@ const Projects: {
 export function ProjectsSlide() {
 	return (<div className={"flex flex-col w-full space-y-4"}>
 		{Projects.map((project, index) => (
-			<a href={project.link} className={"hover:scale-105 active:scale-95 ease-in-out duration-100"} target={"_blank"}>
+			<a href={project.link} className={"hover:scale-105 active:scale-95 ease-in-out duration-100"} target={"_blank"} key={project.name + "_project_slide"}>
 				<motion.div
 					className={"flex flex-col w-full shadow-lg rounded-lg px-4 py-3 bg-white dark:bg-gray-800 dark:text-white overflow-hidden"}
 					initial={{x: (index % 2) * 100 - 50, scale: 0.9, opacity: 0.9}}
