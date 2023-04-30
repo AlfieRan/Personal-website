@@ -1,20 +1,27 @@
 "use client";
-import {ItemWrapper} from "@/app/components/slides/Wrapper";
 import {useAnimatedText} from "@/hooks/useAnimatedText";
 import {StartsWithVowel} from "@/utils/text";
+import {motion} from "framer-motion";
 
-interface Props {
-	index: number
-}
-
-export function AboutSlide({index}: Props) {
+export function AboutSlide() {
 	const {text, setShowing} = useAnimatedText([
 		"Software Engineer", "Web Developer", "Student", "Content Creator", "Mathematician", "Problem Solver",
 		"Logical Thinker", "Entrepreneur", "Creator"
 	])
 
 	return (
-		<ItemWrapper index={index} onCreate={() => setShowing(true)} onDestroy={() => setShowing(false)}>
+		<motion.div
+			className={"flex flex-col md:flex-row w-full shadow-lg rounded-lg bg-white dark:bg-black-700 overflow-hidden"}
+			initial={{ scale: 0.7 }}
+			whileInView={{ scale: 1 }}
+			onViewportEnter={() => setShowing(true)}
+			onViewportLeave={() => setShowing(false)}
+			transition={{
+				ease: "easeInOut",
+				duration: 0.5,
+			}}
+			layout
+		>
 			<img src={"/me.jpg"} className={"w-full md:w-[50%]"} alt={"Photo of Alfie"}/>
 			<div className={"flex flex-col p-5 space-y-5 w-full md:w-[50%]"}>
 				<div className={"flex flex-col space-y-0.5"}>
@@ -37,6 +44,6 @@ export function AboutSlide({index}: Props) {
 				</p>
 				<p>I&apos;ve been creating videos since 10, programming since 9, and striving to be the best from birth.</p>
 			</div>
-		</ItemWrapper>
+		</motion.div>
 	)
 }
