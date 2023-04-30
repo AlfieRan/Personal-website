@@ -11,6 +11,11 @@ export default function RootLayout({children}: {
 }) {
 	return (
 		<html lang="en">
+		<head>
+			<title>Alfie Ranstead</title>
+			<link rel="icon" href="/favicon.ico?v=2" />
+			<meta lang={"en-GB"} />
+		</head>
 		<body>
 		<div className={"flex flex-col w-full h-fit max-h-screen items-center p-4 pb-0 overflow-hidden space-y-4"}>
 				<div className={"z-30 w-full flex-col h-fit max-w-[800px]"}>

@@ -6,6 +6,7 @@ const YoutubeLogo = (props: { size?: string }) => (
       width={props.size ?? "256"}
       height={props.size ?? "256"}
       data-view-component="true"
+      fill="currentColor"
     >
       <g className="style-scope yt-icon">
         <path

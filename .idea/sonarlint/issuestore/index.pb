@@ -21,11 +21,3 @@ A
 next.config.js,8/1/811a6d5a2e04fadb44d8eec365f2fa8af5c4facf
 >
 .eslintrc.json,7/1/71c20a341bfe32aa5cd5b4384e94f942bab6a7d3
-W
-'src/app/components/logos/githubLogo.tsx,c/9/c9f1ea06b5adf5341fa7209a6f2f7b6d1539c24a
-X
-(src/app/components/logos/twitterLogo.tsx,1/8/184308ac82179f1a537a800da45ec21700d134db
-Y
-)src/app/components/logos/linkedINLogo.tsx,8/e/8e70992cf33f0d9ba1c95c72c4d8bdb060bc73de
-X
-(src/app/components/logos/youtubeLogo.tsx,c/f/cf92a5558e564c0bb22df3aa682d06d1800b55f2

@@ -11,7 +11,7 @@ export function AboutSlide() {
 
 	return (
 		<motion.div
-			className={"flex flex-col md:flex-row w-full shadow-lg rounded-lg bg-white dark:bg-black-700 overflow-hidden"}
+			className={"flex flex-col md:flex-row w-full shadow-lg rounded-lg bg-white dark:bg-black-700 dark:border-2 dark:border-black-200 overflow-hidden"}
 			initial={{ scale: 0.7 }}
 			whileInView={{ scale: 1 }}
 			onViewportEnter={() => setShowing(true)}

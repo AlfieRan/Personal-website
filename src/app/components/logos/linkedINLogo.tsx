@@ -12,11 +12,13 @@ const LinkedLogo = (props: { size?: string }) => (
     >
         <g>
             <path
+              fill="currentColor"
                 fillRule={"evenodd"}
                 clipRule={"evenodd"}
                 d="M246.4,204.35v-0.665c-0.136,0.223-0.324,0.446-0.442,0.665H246.4z"
             />
             <path
+              fill="currentColor"
                 fillRule={"evenodd"}
                 clipRule={"evenodd"}
                 d="M0,0v455h455V0H0z M141.522,378.002H74.016V174.906h67.506V378.002z
