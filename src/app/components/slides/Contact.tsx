@@ -12,8 +12,8 @@ export const ContactSlide = () => {
 	const [viewState, setViewState] = useState<ViewStates>("main")
 
 	return (
-		<div className={"flex flex-col md:flex-row w-full h-fit items-center justify-between bg-white rounded-lg shadow-lg overflow-hidden"}>
-			<div className={"flex flex-col h-[300px] justify-center px-6 w-full md:w-[50%] space-y-2 bg-gray-50 border-b-2 md:border-r-2"}>
+		<div className={"flex flex-col md:flex-row w-full h-fit items-center justify-between bg-white dark:bg-black-700 dark:border-2 dark:border-black-200 rounded-lg shadow-lg overflow-hidden"}>
+			<div className={"flex flex-col h-[300px] justify-center px-6 w-full md:w-[50%] space-y-2 bg-gray-50 dark:bg-black-400 dark:border-black-200 border-b-2 md:border-r-2 md:border-b-0"}>
 				{viewState === "main" ? <SendMessage setState={setViewState}/> : viewState === "success" ?
 					<MessageSuccess setState={setViewState}/> : <MessageError setState={setViewState}/>}
 			</div>
@@ -82,14 +82,14 @@ const SendMessage = ({setState}: { setState: SetViewState }) => {
 		<>
 			<span className={"text-lg font-semibold"}>Get in Contact</span>
 			<input
-				className={"w-full border-2 rounded-lg px-3 py-2"}
+				className={"w-full border-2 rounded-lg px-3 py-2 dark:bg-black-200 dark:border-black-100"}
 				style={{borderColor: error === "email" ? "red" : "gray-200"}}
 				placeholder={"email@example.com"}
 				value={email}
 				onChange={(e) => setEmail(e.currentTarget.value)}
 			/>
 			<textarea
-				className={"w-full border-2 rounded-lg px-3 py-2"}
+				className={"w-full border-2 rounded-lg px-3 py-2 dark:bg-black-200 dark:border-black-100"}
 				placeholder={"Hi! I'm {name} and I wanted to say that I love backflips."}
 				value={message}
 				onChange={(e) => setMessage(e.currentTarget.value)}
@@ -114,9 +114,10 @@ const MessageSuccess = ({setState}: { setState: SetViewState }) => (
 		<span className={"text-center"}>I&apos;ll try and get back to you as soon as I can!</span>
 		<div className={"flex w-full h-0"}/>
 		<button
-			className={"w-full bg-blue-200 rounded-lg px-3 py-2 duration-75 ease-in-out hover:text-white active:text-white hover:bg-blue-400 active:bg-blue-500"}
+			className={"w-full bg-blue-200 text-black-700 rounded-lg px-3 py-2 duration-75 ease-in-out hover:text-white active:text-white hover:bg-blue-400 active:bg-blue-500"}
 			onClick={() => setState("main")}
-		>Send Another
+		>
+			Send Another
 		</button>
 	</>
 );
@@ -130,7 +131,7 @@ const MessageError = ({setState}: { setState: SetViewState }) => (
 		<span className={"text-center"}>Something went wrong on my end, please try a different method of communication!</span>
 		<div className={"flex w-full h-0"}/>
 		<button
-			className={"w-full bg-red-200 text-black rounded-lg px-3 py-2 duration-75 ease-in-out hover:text-white hover:bg-red-500 active:text-white active:bg-red-600"}
+			className={"w-full bg-red-200 text-black-700 rounded-lg px-3 py-2 duration-75 ease-in-out hover:text-white hover:bg-red-500 active:text-white active:bg-red-600"}
 			onClick={() => setState("main")}
 		>Try Again
 		</button>
