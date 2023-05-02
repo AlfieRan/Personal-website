@@ -51,8 +51,6 @@ Y
 )src/app/components/logos/linkedINLogo.tsx,8/e/8e70992cf33f0d9ba1c95c72c4d8bdb060bc73de
 S
 #src/app/components/slides/About.tsx,9/d/9d7d31889de02bda6c8fa8d1878350877ce1bfce
-?
-src/globals.css,2/8/28a07f82a82032fbfa5dcacee3ad77788971cb97
 S
 #src/app/components/slides/index.tsx,1/6/16fc8d7ce9409aa29a2f6750407143081534e402
 R

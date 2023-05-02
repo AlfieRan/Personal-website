@@ -38,7 +38,7 @@ const GCSES = [{
 
 export const EducationSlide = () => (
 	<div className={"flex flex-col w-full space-y-4"}>
-		<div className={"grid grid-cols-2 sm:grid-cols-4 w-full gap-4"}>
+		<div className={"grid grid-cols-2 sm:grid-cols-4 w-full gap-2 md:gap-4"}>
 			{ALevels.map(subject => (
 				<ALevel subject={subject.subject} grade={subject.grade} key={subject.subject + "_a_level_item"}/>))}
 		</div>
