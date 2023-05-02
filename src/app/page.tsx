@@ -5,10 +5,10 @@ interface ItemProps {
 }
 
 export default function Home() {
-  const Items: React.FC<ItemProps>[] = [AboutSlide, ProjectsSlide, Tools, Youtube, EducationSlide, ContactSlide]
+  const Items: React.FC<ItemProps>[] = [AboutSlide, Tools, ProjectsSlide, Youtube, EducationSlide, ContactSlide]
 
   return (
-    <div className={"flex flex-col space-y-8 pb-12 w-full h-fit min-h-screen"}>
+    <div className={"flex flex-col space-y-12 pb-12 w-full h-fit min-h-screen"}>
       {Items.map((Item, index) => (
         <Item index={index} key={`slide_${index}`} />
       ))}

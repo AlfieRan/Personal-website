@@ -61,7 +61,16 @@ N
 src/app/components/Socials.tsx,7/4/742cd382ef4cd601858bc85290feb26114888fb7
 T
 $src/app/components/logos/Discord.tsx,e/4/e4b89f9dfa803d9024d4e3cd3e53169d4c36da64
-@
-src/app/page.tsx,3/3/3393394e21dbac7686e91ad17c5283fb052d67f3
 D
 src/utils/contact.ts,6/b/6bd297517da4464c05f3e09b643de86c27354be1
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+<
+package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+B
+src/app/layout.tsx,c/f/cfb47de6ae0cae626eed46461300112ef521d977
+?
+src/globals.css,2/8/28a07f82a82032fbfa5dcacee3ad77788971cb97

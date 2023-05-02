@@ -10,7 +10,7 @@ export const Youtube = () => (
 			ease: "easeInOut",
 			duration: 0.15,
 		}}
-		className={"w-full px-4"}
+		className={"w-full px-4 py-2"}
 	>
 		<a href={"https://www.youtube.com/@UnoFedeo/"} className={"flex flex-row w-full justify-center items-center space-x-4"} target={"_blank"}>
 			<div className={"flex items-center justify-center w-36 overflow-hidden rounded-full"}>
