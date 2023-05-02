@@ -55,7 +55,7 @@ export const EducationSlide = () => (
 
 const ALevel = ({subject, grade}: { subject: string; grade: string }) => (
 	<motion.div
-		className={"col-span-1 flex flex-col w-full h-full bg-white dark:bg-black-400 dark:border-2 dark:border-black-200 rounded-lg shadow-lg py-4 px-6 justify-between items-center space-y-3"}
+		className={"col-span-1 inline-block flex flex-col w-full bg-white dark:bg-black-400 dark:border-2 dark:border-black-200 rounded-lg shadow-lg py-4 px-2 md:px-6 justify-between items-center space-y-3"}
 		initial={{scale: 0.8}}
 		whileInView={{scale: 1}}
 		whileHover={{ scale: 1.05 }}
