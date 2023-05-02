@@ -111,7 +111,7 @@ const MessageSuccess = ({setState}: { setState: SetViewState }) => (
 			<span className={"text-3xl text-center font-semibold"}>Message Sent</span>
 		</div>
 
-		<span className={"text-center"}>I'll try and get back to you as soon as I can!</span>
+		<span className={"text-center"}>I&apos;ll try and get back to you as soon as I can!</span>
 		<div className={"flex w-full h-0"}/>
 		<button
 			className={"w-full bg-blue-200 rounded-lg px-3 py-2 duration-75 ease-in-out hover:text-white active:text-white hover:bg-blue-400 active:bg-blue-500"}

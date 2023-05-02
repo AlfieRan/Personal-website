@@ -1,11 +1,7 @@
 import {NextRequest, NextResponse} from "next/server";
 import {checkContact} from "@/utils/contact";
-import dotenv from "dotenv";
-import {INTERNALS} from "next/dist/server/web/spec-extension/request";
+import {DISCORD_WEBHOOK} from "@/utils/environment";
 
-dotenv.config();
-
-export const DISCORD_WEBHOOK = process.env.DISCORD_WEBHOOK
 
 export async function POST(request: NextRequest) {
 	try {
@@ -32,7 +28,6 @@ export async function POST(request: NextRequest) {
 								name: "ip",
 								value:
 									request.ip ??
-									request.headers["x-forwarded-for"] ??
 									request.headers.get("x-forwarded-for") ??
 									"unknown",
 							},
