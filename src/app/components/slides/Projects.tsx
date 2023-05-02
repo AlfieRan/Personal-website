@@ -74,7 +74,7 @@ export function ProjectsSlide() {
 				key={project.name + "_project_slide"}
 			>
 				<a href={project.link} target={"_blank"} className={"flex flex-col w-full  space-y-1"}>
-					<div className={"flex flex-row w-full justify-between items-center"}>
+					<div className={"flex flex-col space-y-2 mb-2 md:flex-row md:space-y-0 w-full justify-between md:items-center"}>
 						<p className={"font-semibold text-xl"}>{project.name}</p>
 						<div className={"flex flex-row space-x-2"}>
 							{project.icons}

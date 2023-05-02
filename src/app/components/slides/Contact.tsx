@@ -1,6 +1,6 @@
 "use client";
 
-import {LinkedLogo, TwitterLogo, DiscordLogo, GithubLogo, YoutubeLogo} from "@/app/components/logos";
+import {LinkedLogo, TwitterLogo, DiscordLogo, GithubLogo} from "@/app/components/logos";
 import {EnvelopeIcon, ExclamationTriangleIcon, PaperAirplaneIcon} from "@heroicons/react/24/solid";
 import {useCallback, useState} from "react";
 import {checkContact} from "@/utils/contact";
@@ -12,12 +12,12 @@ export const ContactSlide = () => {
 	const [viewState, setViewState] = useState<ViewStates>("main")
 
 	return (
-		<div className={"flex flex-row w-full h-fit items-center justify-between bg-white rounded-lg shadow-lg overflow-hidden"}>
-			<div className={"flex flex-col h-[300px] justify-center px-6 w-[50%] space-y-2 bg-gray-50 border-r-2"}>
+		<div className={"flex flex-col md:flex-row w-full h-fit items-center justify-between bg-white rounded-lg shadow-lg overflow-hidden"}>
+			<div className={"flex flex-col h-[300px] justify-center px-6 w-full md:w-[50%] space-y-2 bg-gray-50 border-b-2 md:border-r-2"}>
 				{viewState === "main" ? <SendMessage setState={setViewState}/> : viewState === "success" ?
 					<MessageSuccess setState={setViewState}/> : <MessageError setState={setViewState}/>}
 			</div>
-			<div className={"flex flex-col h-fit items-center justify-center p-8 w-[50%]"}>
+			<div className={"flex flex-col h-[300px] items-center justify-center p-8 w-full md:w-[50%]"}>
 				<div className={"flex flex-col space-y-1 items-start"}>
 					<a className={"contactItem"} href={"https://twitter.com/AlfieRanstead"} target={"_blank"}>
 						<TwitterLogo size={"20"}/>

@@ -19,11 +19,11 @@ export const Youtube = () => (
 					alt={"Youtube Profile Picture"} width={"250"} height={"250"}/>
 			</div>
 			<div className={"flex flex-col h-32 w-full justify-center"}>
-				<div className={"flex flex-col sm:flex-row text-xl justify-between"}>
+				<div className={"flex flex-col sm:flex-row text-md md:text-xl justify-between"}>
 					<b>Alfie Ranstead</b>
 					<b>@UnoFedeo</b>
 				</div>
-				<div className={"flex flex-col sm:flex-row text-3xl justify-between"}>
+				<div className={"flex flex-col sm:flex-row text-lg md:text-3xl justify-between"}>
 					<b>{wrapData(ContentStats.views)} Views</b>
 					<b>{wrapData(ContentStats.subscribers)} Subscribers</b>
 				</div>
