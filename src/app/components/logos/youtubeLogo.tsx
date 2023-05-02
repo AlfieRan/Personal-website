@@ -1,4 +1,4 @@
-const YoutubeLogo = (props: { size?: string }) => (
+export const YoutubeLogo = (props: { size?: string }) => (
   <>
     <svg
       aria-hidden="true"
@@ -22,5 +22,3 @@ const YoutubeLogo = (props: { size?: string }) => (
     </svg>
   </>
 );
-
-export default YoutubeLogo;

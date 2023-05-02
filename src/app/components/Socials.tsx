@@ -1,7 +1,4 @@
-import GithubLogo from "@/app/components/logos/githubLogo";
-import LinkedLogo from "@/app/components/logos/linkedINLogo";
-import TwitterLogo from "@/app/components/logos/twitterLogo";
-import YoutubeLogo from "@/app/components/logos/youtubeLogo";
+import {TwitterLogo, YoutubeLogo, LinkedLogo, GithubLogo} from "@/app/components/logos";
 
 export default function Socials() {
 	const Socials: { component: any; alt: string; link: string }[] = [

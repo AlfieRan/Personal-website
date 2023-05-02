@@ -62,13 +62,18 @@ const Projects: {
 export function ProjectsSlide() {
 	return (<div className={"flex flex-col w-full space-y-4"}>
 		{Projects.map((project, index) => (
-			<a href={project.link} className={"hover:scale-105 active:scale-95 ease-in-out duration-100"} target={"_blank"}
-				 key={project.name + "_project_slide"}>
-				<motion.div
-					className={"flex flex-col w-full shadow-lg rounded-lg px-4 py-3 space-y-1 bg-white dark:bg-black-700 dark:border-2 dark:border-black-200 dark:text-white overflow-hidden"}
-					initial={{x: (index % 2) * 100 - 50, scale: 0.9, opacity: 0.9}}
-					whileInView={{x: 0, scale: 1, opacity: 1}}
-				>
+			<motion.div
+				className={"w-full shadow-lg rounded-lg px-4 py-3 bg-white dark:bg-black-700 dark:border-2 dark:border-black-200 dark:text-white overflow-hidden"}
+				initial={{x: -100, scale: 0.9, opacity: 0.9}}
+				whileInView={{x: 0, scale: 1, opacity: 1}}
+				whileHover={{ scale: 1.1, x: 25 }}
+				transition={{
+					ease: "easeInOut",
+					duration: 0.2,
+				}}
+				key={project.name + "_project_slide"}
+			>
+				<a href={project.link} target={"_blank"} className={"flex flex-col w-full  space-y-1"}>
 					<div className={"flex flex-row w-full justify-between items-center"}>
 						<p className={"font-semibold text-xl"}>{project.name}</p>
 						<div className={"flex flex-row space-x-2"}>
@@ -76,8 +81,8 @@ export function ProjectsSlide() {
 						</div>
 					</div>
 					<p>{project.description}</p>
-				</motion.div>
-			</a>
+				</a>
+			</motion.div>
 		))}
 	</div>)
 }

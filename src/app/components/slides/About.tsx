@@ -12,8 +12,8 @@ export function AboutSlide() {
 	return (
 		<motion.div
 			className={"flex flex-col md:flex-row w-full shadow-lg rounded-lg bg-white dark:bg-black-700 dark:border-2 dark:border-black-200 overflow-hidden"}
-			initial={{ scale: 0.7 }}
-			whileInView={{ scale: 1 }}
+			// initial={{ scale: 0.7 }}
+			// whileInView={{ scale: 1 }}
 			onViewportEnter={() => setShowing(true)}
 			onViewportLeave={() => setShowing(false)}
 			transition={{
@@ -22,7 +22,7 @@ export function AboutSlide() {
 			}}
 			layout
 		>
-			<img src={"/me.jpg"} className={"w-full md:w-[50%]"} alt={"Photo of Alfie"}/>
+			<img src={"/images/me.jpg"} className={"w-full md:w-[50%]"} alt={"Photo of Alfie"}/>
 			<div className={"flex flex-col p-5 space-y-5 w-full md:w-[50%]"}>
 				<div className={"flex flex-col space-y-0.5"}>
 					<p className={"font-semibold text-2xl"}>Hi, I&apos;m <span className={"md:hidden inline"}>Alfie!</span><span

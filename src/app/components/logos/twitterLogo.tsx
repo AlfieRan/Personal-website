@@ -1,4 +1,4 @@
-const TwitterLogo = (props: { size?: string }) => (
+export const TwitterLogo = (props: { size?: string }) => (
   <>
     <svg
       aria-hidden="true"
@@ -14,5 +14,3 @@ const TwitterLogo = (props: { size?: string }) => (
     </svg>
   </>
 );
-
-export default TwitterLogo;

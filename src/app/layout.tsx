@@ -13,20 +13,22 @@ export default function RootLayout({children}: {
 		<html lang="en">
 		<head>
 			<title>Alfie Ranstead</title>
-			<link rel="icon" href="/favicon.ico?v=2" />
-			<meta lang={"en-GB"} />
+			<link rel="icon" href="/favicon.ico?v=2"/>
+			<meta lang={"en-GB"}/>
 		</head>
 		<body>
-		<div className={"flex flex-col w-full h-fit max-h-screen items-center p-4 pb-0 overflow-hidden space-y-4"}>
-				<div className={"z-30 w-full flex-col h-fit max-w-[800px]"}>
+		<div className={"flex flex-1 flex-col w-full h-fit max-h-screen items-center p-4 pb-0 overflow-y-scroll space-y-4"}>
+			<div className={"fixed flex items-center justify-center z-30 bg-white w-full p-1 space-y-2 w-full flex-col h-fit"}>
+				<div className={"flex flex-col max-w-[800px] w-full"}>
 					<Header/>
+					<div className={"w-full max-w-[800px] h-0 border-b-2 border-black dark:border-white"}/>
 				</div>
-				<div className={"w-full max-w-[800px] h-0 border-b-2 border-black dark:border-white"}/>
-				<div className={"z-10 flex flex-col w-full h-fit items-center overflow-x-hidden overflow-y-scroll"}>
-					<div className={"flex flex-col w-full max-w-[800px]"}>
-						{children}
-					</div>
+			</div>
+			<div className={"z-10 py-16 flex flex-col w-full h-fit items-center overflow-x-hidden"}>
+				<div className={"flex flex-col w-full max-w-[800px]"}>
+					{children}
 				</div>
+			</div>
 		</div>
 		</body>
 		</html>

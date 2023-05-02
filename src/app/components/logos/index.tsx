@@ -17,3 +17,4 @@ export * from "./Spotify";
 export * from "./Tailwindcss";
 export * from "./typescript";
 export * from "./Vlang";
+export * from "./Discord"

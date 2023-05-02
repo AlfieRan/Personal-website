@@ -1,4 +1,4 @@
-const GithubLogo = (props: { size?: string }) => (
+export const GithubLogo = (props: { size?: string }) => (
   <svg
     aria-hidden="true"
     viewBox="0 0 16 16"
@@ -15,5 +15,3 @@ const GithubLogo = (props: { size?: string }) => (
     ></path>
   </svg>
 );
-
-export default GithubLogo;

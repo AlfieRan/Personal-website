@@ -30,3 +30,6 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.contactItem {
+  @apply flex flex-row items-center justify-center space-x-2 font-semibold duration-75 ease-in-out hover:underline}

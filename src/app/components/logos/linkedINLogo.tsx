@@ -1,4 +1,4 @@
-const LinkedLogo = (props: { size?: string }) => (
+export const LinkedLogo = (props: { size?: string }) => (
     <svg
         fill="inherit"
         width={props.size ?? "256"}
@@ -31,5 +31,3 @@ const LinkedLogo = (props: { size?: string }) => (
         </g>
     </svg>
 );
-
-export default LinkedLogo;
