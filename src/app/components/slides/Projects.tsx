@@ -17,6 +17,7 @@ import {
 	AnthropicLogo,
 	OpenaiLogo
 } from "@/app/components/logos";
+import {useScreenWidth} from "@/hooks/useScreenWidth";
 
 const Projects: {
 	name: string,
@@ -60,13 +61,17 @@ const Projects: {
 }];
 
 export function ProjectsSlide() {
+	const width = useScreenWidth();
+	const offset = width < 640 ? 0 : 25;
+	const scaleMulti = width < 640 ? 1.05 : 1.1;
+
 	return (<div className={"flex flex-col w-full space-y-4"}>
 		{Projects.map((project, index) => (
 			<motion.div
 				className={"w-full shadow-lg rounded-lg px-4 py-3 bg-white dark:bg-black-700 dark:border-2 dark:border-black-200 dark:text-white overflow-hidden"}
 				initial={{x: -100, scale: 0.9, opacity: 0.9}}
 				whileInView={{x: 0, scale: 1, opacity: 1}}
-				whileHover={{ scale: 1.1, x: 25 }}
+				whileHover={{ scale: scaleMulti, x: offset }}
 				transition={{
 					ease: "easeInOut",
 					duration: 0.2,

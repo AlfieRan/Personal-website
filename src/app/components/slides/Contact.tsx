@@ -12,8 +12,10 @@ export const ContactSlide = () => {
 	const [viewState, setViewState] = useState<ViewStates>("main")
 
 	return (
-		<div className={"flex flex-col md:flex-row w-full h-fit items-center justify-between bg-white dark:bg-black-700 dark:border-2 dark:border-black-200 rounded-lg shadow-lg overflow-hidden"}>
-			<div className={"flex flex-col h-[300px] justify-center px-6 w-full md:w-[50%] space-y-2 bg-gray-50 dark:bg-black-400 dark:border-black-200 border-b-2 md:border-r-2 md:border-b-0"}>
+		<div
+			className={"flex flex-col md:flex-row w-full h-fit items-center justify-between bg-white dark:bg-black-700 dark:border-2 dark:border-black-200 rounded-lg shadow-lg overflow-hidden"}>
+			<div
+				className={"flex flex-col h-[300px] justify-center px-6 w-full md:w-[50%] space-y-2 bg-gray-50 dark:bg-black-400 dark:border-black-200 border-b-2 md:border-r-2 md:border-b-0"}>
 				{viewState === "main" ? <SendMessage setState={setViewState}/> : viewState === "success" ?
 					<MessageSuccess setState={setViewState}/> : <MessageError setState={setViewState}/>}
 			</div>
@@ -49,10 +51,15 @@ const SendMessage = ({setState}: { setState: SetViewState }) => {
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("")
 	const [error, setError] = useState<false | "email" | "message">(false);
+	const [loading, setLoading] = useState(false);
 
 	const submit = useCallback(async () => {
+		setLoading(true);
 		const checkInputs = checkContact(email, message);
-		if (checkInputs !== true) return setError(checkInputs)
+		if (checkInputs !== true) {
+			setLoading(false);
+			return setError(checkInputs);
+		}
 
 		const options: RequestInit = {
 			method: "POST",
@@ -63,19 +70,27 @@ const SendMessage = ({setState}: { setState: SetViewState }) => {
 		}
 
 		const response = await fetch("/api/sendMessage", options);
-		if (!response.ok) return setState("error");
-
-		try {
-			const res = await response.json();
-			if (res.success) return setState("success");
-
-			const error = res.error === "email" ? "email" : "message"
-			return setError(error);
-		} catch (e) {
-			console.error(e)
+		if (!response.ok) {
+			setLoading(false);
 			return setState("error");
 		}
 
+		try {
+			const res = await response.json();
+			if (res.success) {
+				setLoading(false);
+				return setState("success");
+			}
+
+
+			const error = res.error === "email" ? "email" : "message"
+			setLoading(false);
+			return setError(error);
+		} catch (e) {
+			console.error(e)
+			setLoading(false);
+			return setState("error");
+		}
 	}, [email, message])
 
 	return (
@@ -98,7 +113,10 @@ const SendMessage = ({setState}: { setState: SetViewState }) => {
 			<button
 				className={"w-full bg-blue-500 text-white rounded-lg px-3 py-2 duration-75 ease-in-out hover:scale-[1.02] active:scale-[0.98]"}
 				onClick={submit}
-			>Send
+				disabled={loading}
+				aria-disabled={loading}
+			>
+				{loading ? (<span className={"text-gray-400"}>Sending...</span>) : (<span>Send Message</span>)}
 			</button>
 		</>
 	);
@@ -107,7 +125,7 @@ const SendMessage = ({setState}: { setState: SetViewState }) => {
 const MessageSuccess = ({setState}: { setState: SetViewState }) => (
 	<>
 		<div className={"flex flex-row w-full justify-center items-center space-x-2"}>
-			<PaperAirplaneIcon className={"h-8"} />
+			<PaperAirplaneIcon className={"h-8"}/>
 			<span className={"text-3xl text-center font-semibold"}>Message Sent</span>
 		</div>
 
@@ -125,10 +143,11 @@ const MessageSuccess = ({setState}: { setState: SetViewState }) => (
 const MessageError = ({setState}: { setState: SetViewState }) => (
 	<>
 		<div className={"flex flex-row w-full justify-center items-center space-x-2"}>
-			<ExclamationTriangleIcon className={"h-8"} />
+			<ExclamationTriangleIcon className={"h-8"}/>
 			<span className={"text-3xl text-center font-semibold"}>Server Failure</span>
 		</div>
-		<span className={"text-center"}>Something went wrong on my end, please try a different method of communication!</span>
+		<span
+			className={"text-center"}>Something went wrong on my end, please try a different method of communication!</span>
 		<div className={"flex w-full h-0"}/>
 		<button
 			className={"w-full bg-red-200 text-black-700 rounded-lg px-3 py-2 duration-75 ease-in-out hover:text-white hover:bg-red-500 active:text-white active:bg-red-600"}
