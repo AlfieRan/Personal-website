@@ -6,8 +6,6 @@ L
 A
 postcss.config.js,3/f/3f70684581fd16ab3be77ca959e0138ef3ee8bfb
 >
-next.config.js,8/1/811a6d5a2e04fadb44d8eec365f2fa8af5c4facf
->
 .eslintrc.json,7/1/71c20a341bfe32aa5cd5b4384e94f942bab6a7d3
 W
 'src/app/components/logos/typescript.tsx,2/e/2ecb64a0349f83e05455f6ba4e5c69d222a3f951
@@ -33,8 +31,6 @@ U
 %src/app/components/logos/Academic.tsx,5/7/578915fdbbd2c6a237539ed82975e7a5353d9a56
 R
 "src/app/components/logos/mysql.tsx,0/9/09805036d449e7d1aded653c9c040fca7f18cfdc
-B
-tailwind.config.js,0/9/0918cbb76f2c44f223706cec9d31a32cd1177ce4
 S
 #src/app/components/logos/Openai.tsx,a/1/a1961edd5b5ec1d7db4975c8d375b8159319d338
 V
@@ -66,11 +62,5 @@ D
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-<
-package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-B
-src/app/layout.tsx,c/f/cfb47de6ae0cae626eed46461300112ef521d977
-?
-src/globals.css,2/8/28a07f82a82032fbfa5dcacee3ad77788971cb97

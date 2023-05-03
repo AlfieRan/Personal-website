@@ -27,10 +27,10 @@ const Projects: {
 }[] = [{
 	name: "MusicPebbles.com",
 	description: "A Spotify Dashboard that lets you view, listen to and rank your top songs and artists.\n " +
-		"Built over a one month period in an attempt to solve the problem of the lack of a Spotify dashboard" +
-	"that was actually useful and looked good, MusicPebbles.com is a fully featured Spotify dashboard that" +
-		" you can use right now!\n It's incredibly efficient, and can handle thousands of users without costing more than" +
-		" a few pounds a month to run.",
+		"Built over a one month period in an attempt to solve the problem of the lack of a Spotify dashboard " +
+	"that was actually useful and looked good, MusicPebbles.com is a fully featured Spotify dashboard that " +
+		"you can use right now!\n It's incredibly efficient, and can handle thousands of users without costing more than " +
+		"a few pounds a month to run.",
 	link: "https://www.musicpebbles.com/",
 	icons: [<TypescriptLogo size={24} key={"ts_icon_ms"}/>, <NextjsLogo size={24} key={"nj_icon_ms"}/>,
 		<SpotifyLogo size={24} key={"s_icon_ms"}/>, <RedisLogo size={24} key={"r_icon_ms"}/>,
@@ -48,7 +48,7 @@ const Projects: {
 	name: "WAMcast.ai",
 	description: "Generate an entire podcast from a single text input. \n Choose two of your favourite celebrities or " +
 		"specialists, write a sentence describing what you'd like them to talk about and let our AI do the rest.\n " +
-		"Originally Built in only 10 hours for V7's Hackathon, this project is on the cutting edge of what AI can do and " +
+		"Originally built in only 10 hours for V7's Hackathon, this project is on the cutting edge of what AI can do and " +
 		"gives a glimpse into the future of personalised content creation.",
 	link: "https://wamcast.ai/",
 	icons: [<TypescriptLogo size={24} key={"ts_icon_w"}/>, <NextjsLogo size={24} key={"nj_icon_w"}/>,
