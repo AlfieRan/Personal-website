@@ -15,7 +15,7 @@ export const ContactSlide = () => {
 		<div
 			className={"flex flex-col md:flex-row w-full h-fit items-center justify-between bg-white dark:bg-black-700 dark:border-2 dark:border-black-200 rounded-lg shadow-lg overflow-hidden"}>
 			<div
-				className={"flex flex-col h-[300px] justify-center px-6 w-full md:w-[50%] space-y-2 bg-gray-50 dark:bg-black-400 dark:border-black-200 border-b-2 md:border-r-2 md:border-b-0"}>
+				className={"flex flex-col min-h-[300px] max-h-[500px] justify-center p-6 w-full md:w-[50%] space-y-2 bg-gray-50 dark:bg-black-400 dark:border-black-200 border-b-2 md:border-r-2 md:border-b-0"}>
 				{viewState === "main" ? <SendMessage setState={setViewState}/> : viewState === "success" ?
 					<MessageSuccess setState={setViewState}/> : <MessageError setState={setViewState}/>}
 			</div>

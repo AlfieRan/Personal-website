@@ -24,13 +24,15 @@ export function AboutSlide() {
 		>
 			<img src={"/images/me.jpg"} className={"w-full md:w-[50%]"} alt={"Photo of Alfie"}/>
 			<div className={"flex flex-col p-5 space-y-5 w-full md:w-[50%]"}>
-				<div className={"flex flex-col space-y-0.5"}>
-					<p className={"font-semibold text-2xl"}>Hi, I&apos;m <span className={"md:hidden inline"}>Alfie!</span><span
-						className={"hidden md:inline"}>Alfie Ranstead!</span></p>
+				<div className={"flex flex-col"}>
+					<p className={"font-semibold text-2xl"}>Hi, I&apos;m Alfie Ranstead!</p>
 					<p className={"text-lg space-x-1"}>
 						<span>A{StartsWithVowel(text.phrase) ? "n" : ""}</span>
 						<span className={"font-bold"}>{text.phrase}</span>
-						<span>based in the UK</span>
+						<span className={"hidden md:inline"}>based in the UK</span>
+					</p>
+					<p>
+						<span className={"inline md:hidden"}>based in the UK</span>
 					</p>
 				</div>
 				<p>
