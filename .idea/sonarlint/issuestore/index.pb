@@ -70,8 +70,6 @@ B
 src/app/layout.tsx,c/f/cfb47de6ae0cae626eed46461300112ef521d977
 K
 src/hooks/useScreenWidth.ts,4/b/4b70877088b3d60990946ab56d73c8942d62857e
-V
-&src/app/components/slides/Projects.tsx,a/9/a9e4c28536ab1315535563ca0bc805738f7d93ba
 S
 #src/app/components/slides/About.tsx,9/d/9d7d31889de02bda6c8fa8d1878350877ce1bfce
 S

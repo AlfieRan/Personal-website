@@ -70,7 +70,7 @@ const Projects: {
 		"blockchain mining, whilst maintaining as much of the energy efficiency of Proof of Stake as possible.\n " + "" +
 		"Monochain is currently not in active development or in a stable state, but is a project I am very passionate " +
 		"about and hope to continue working on in the future.",
-	link: "https://monochain.network/",
+	link: "https://github.com/AlfieRan/MonoChain",
 	icons: [<AcademicLogo size={24} key={"ac_icon_mn"}/>, <PaperLogo size={24} key={"ph_icon_mn"}/>,
 		<TypescriptLogo size={24} key={"ts_icon_mn"}/>, <VlangLogo size={24} key={"mn_icon_v"}/>,
 		<NextjsLogo size={24} key={"nj_icon_mn"}/>, <PostgresqlLogo size={24} key={"ps_icon_mn"}/>]
