@@ -32,6 +32,26 @@ export const Youtube = () => (
 	</motion.div>
 )
 
+export const YoutubeNoLink = () => (
+	<div className={"flex flex-row w-full justify-center items-center space-x-4 px-4 py-2"}>
+		<div className={"flex items-center justify-center w-36 overflow-hidden rounded-full"}>
+			<Image
+				src={"/images/youtubePFP.jpg"}
+				alt={"Youtube Profile Picture"} width={"250"} height={"250"}/>
+		</div>
+		<div className={"flex flex-col h-32 w-full justify-center"}>
+			<div className={"flex flex-col leading-tight sm:flex-row text-md md:text-xl justify-between"}>
+				<b>Youtube</b>
+				<b>2021 - 2022</b>
+			</div>
+			<div className={"flex flex-col leading-tight sm:flex-row text-lg md:text-3xl justify-between"}>
+				<b>{wrapData(ContentStats.views)} Views</b>
+				<b>{wrapData(ContentStats.subscribers)} Subscribers</b>
+			</div>
+		</div>
+	</div>
+);
+
 export const ContentStats = {
 	views: 1780672,
 	subscribers: 6600,

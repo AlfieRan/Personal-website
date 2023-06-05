@@ -17,11 +17,11 @@ export default function Socials() {
 			component: TwitterLogo,
 			link: "https://twitter.com/alfieranstead",
 		},
-		{
-			alt: "Youtube",
-			component: YoutubeLogo,
-			link: "https://youtube.com/c/unofedeo",
-		},
+		// {
+		// 	alt: "Youtube",
+		// 	component: YoutubeLogo,
+		// 	link: "https://youtube.com/c/unofedeo",
+		// },
 	];
 
 	return (

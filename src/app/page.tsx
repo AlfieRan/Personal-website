@@ -1,11 +1,19 @@
-import {AboutSlide, ContactSlide, EducationSlide, ProjectsSlide, Tools, Youtube} from "@/app/components/slides";
+import {
+  AboutSlide,
+  ContactSlide,
+  EducationSlide,
+  ProjectsSlide,
+  Tools,
+  Youtube,
+  YoutubeNoLink
+} from "@/app/components/slides";
 
 interface ItemProps {
   index: number
 }
 
 export default function Home() {
-  const Items: React.FC<ItemProps>[] = [AboutSlide, Tools, ProjectsSlide, Youtube, EducationSlide, ContactSlide]
+  const Items: React.FC<ItemProps>[] = [AboutSlide, Tools, ProjectsSlide, YoutubeNoLink, EducationSlide, ContactSlide]
 
   return (
     <div className={"flex flex-col space-y-12 pb-12 w-full h-fit min-h-screen"}>

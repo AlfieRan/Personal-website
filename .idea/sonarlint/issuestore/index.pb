@@ -43,14 +43,10 @@ X
 (src/app/components/logos/youtubeLogo.tsx,c/f/cf92a5558e564c0bb22df3aa682d06d1800b55f2
 Y
 )src/app/components/logos/linkedINLogo.tsx,8/e/8e70992cf33f0d9ba1c95c72c4d8bdb060bc73de
-S
-#src/app/components/slides/index.tsx,1/6/16fc8d7ce9409aa29a2f6750407143081534e402
 R
 "src/app/components/logos/index.tsx,1/7/17f356fdeb728cc3ee3443202a2ba7f635b2fef5
 W
 'src/app/components/logos/githubLogo.tsx,c/9/c9f1ea06b5adf5341fa7209a6f2f7b6d1539c24a
-N
-src/app/components/Socials.tsx,7/4/742cd382ef4cd601858bc85290feb26114888fb7
 T
 $src/app/components/logos/Discord.tsx,e/4/e4b89f9dfa803d9024d4e3cd3e53169d4c36da64
 D
@@ -70,3 +66,13 @@ B
 tailwind.config.js,0/9/0918cbb76f2c44f223706cec9d31a32cd1177ce4
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+B
+src/app/layout.tsx,c/f/cfb47de6ae0cae626eed46461300112ef521d977
+K
+src/hooks/useScreenWidth.ts,4/b/4b70877088b3d60990946ab56d73c8942d62857e
+V
+&src/app/components/slides/Projects.tsx,a/9/a9e4c28536ab1315535563ca0bc805738f7d93ba
+S
+#src/app/components/slides/About.tsx,9/d/9d7d31889de02bda6c8fa8d1878350877ce1bfce
+S
+#src/app/components/slides/Tools.tsx,e/9/e99837a6e697021131bfa79ac4a49ed780e6fa47

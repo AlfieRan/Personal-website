@@ -105,7 +105,7 @@ const SendMessage = ({setState}: { setState: SetViewState }) => {
 			/>
 			<textarea
 				className={"w-full border-2 rounded-lg px-3 py-2 dark:bg-black-200 dark:border-black-100"}
-				placeholder={"Hi! I'm {name} and I wanted to say that I love backflips."}
+				placeholder={"Hi! I'm {name} and I wanted to say that I love typescript."}
 				value={message}
 				onChange={(e) => setMessage(e.currentTarget.value)}
 			/>
