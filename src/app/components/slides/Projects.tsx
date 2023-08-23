@@ -28,7 +28,7 @@ const Projects: {
 	position?: string
 }[] = [{
 	name: "Elo.ai",
-	description: "Saving enterprise clients thousands of hours by revolutionising they complete question answering tasks " +
+	description: "Saving enterprise clients thousands of hours by revolutionising the way they complete question answering tasks " +
 		"such as RFPS, due diligence and more.",
 	link: "https://www.elo.ai/",
 	icons: [<TypescriptLogo size={24} key={"ts_icon_e"}/>, <NextjsLogo size={24} key={"nj_icon_e"}/>,
