@@ -1,8 +1,6 @@
 
 A
 src/utils/text.ts,c/a/caa81c8a43a08f34741ba4ff4460abd7a1d63c74
-L
-src/hooks/useAnimatedText.ts,d/9/d9f0ffa672ed1314f9b2d557e7c5b4afef50eddf
 A
 postcss.config.js,3/f/3f70684581fd16ab3be77ca959e0138ef3ee8bfb
 >
@@ -71,6 +69,18 @@ B
 K
 src/hooks/useScreenWidth.ts,4/b/4b70877088b3d60990946ab56d73c8942d62857e
 S
-#src/app/components/slides/About.tsx,9/d/9d7d31889de02bda6c8fa8d1878350877ce1bfce
-S
 #src/app/components/slides/Tools.tsx,e/9/e99837a6e697021131bfa79ac4a49ed780e6fa47
+U
+%src/app/components/slides/Youtube.tsx,7/0/70f28169c1a075502db7fa09ce4a2d6a850c53bf
+U
+%src/app/components/slides/Contact.tsx,6/d/6da917bb6e5f2e996a5edb6b77001f1bee2acca8
+N
+src/app/components/Socials.tsx,7/4/742cd382ef4cd601858bc85290feb26114888fb7
+S
+#src/app/components/slides/index.tsx,1/6/16fc8d7ce9409aa29a2f6750407143081534e402
+V
+&src/app/components/slides/Projects.tsx,a/9/a9e4c28536ab1315535563ca0bc805738f7d93ba
+M
+src/app/components/Header.tsx,3/5/35c2e62dde617eaf4bda515257701a04b47d8284
+@
+src/app/page.tsx,3/3/3393394e21dbac7686e91ad17c5283fb052d67f3

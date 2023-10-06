@@ -2,11 +2,12 @@
 import {useAnimatedText} from "@/hooks/useAnimatedText";
 import {StartsWithVowel} from "@/utils/text";
 import {motion} from "framer-motion";
+import Image from "next/image";
 
 export function AboutSlide() {
 	const {text, setShowing} = useAnimatedText([
-		"Software Engineer", "Web Developer", "Student", "Content Creator", "Mathematician", "Problem Solver",
-		"Logical Thinker", "Entrepreneur", "Creator"
+		"Software Engineer", "Web Developer", "Founder", "Content Creator", "Mathematician", "Problem Solver",
+		"Logical Thinker", "Entrepreneur", "Creator", "CTO"
 	])
 
 	return (
@@ -22,7 +23,7 @@ export function AboutSlide() {
 			}}
 			layout
 		>
-			<img src={"/images/me.jpg"} className={"w-full md:w-[50%]"} alt={"Photo of Alfie"}/>
+			<Image src={"/images/pfp.jpg"} width={4024} height={4024} className={"w-full md:w-[50%]"} alt={"Photo of Alfie"}/>
 			<div className={"flex flex-col p-5 space-y-5 w-full md:w-[50%]"}>
 				<div className={"flex flex-col"}>
 					<p className={"font-semibold text-2xl"}>Hi, I&apos;m Alfie Ranstead!</p>
