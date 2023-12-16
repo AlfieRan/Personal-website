@@ -54,18 +54,10 @@ D
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-W
-'src/app/components/slides/Education.tsx,4/5/4542b9039b8d8bf04e6f0e02abcddea94c316851
-?
-src/globals.css,2/8/28a07f82a82032fbfa5dcacee3ad77788971cb97
 >
 next.config.js,8/1/811a6d5a2e04fadb44d8eec365f2fa8af5c4facf
-B
-tailwind.config.js,0/9/0918cbb76f2c44f223706cec9d31a32cd1177ce4
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
-B
-src/app/layout.tsx,c/f/cfb47de6ae0cae626eed46461300112ef521d977
 K
 src/hooks/useScreenWidth.ts,4/b/4b70877088b3d60990946ab56d73c8942d62857e
 S
@@ -82,5 +74,17 @@ V
 &src/app/components/slides/Projects.tsx,a/9/a9e4c28536ab1315535563ca0bc805738f7d93ba
 M
 src/app/components/Header.tsx,3/5/35c2e62dde617eaf4bda515257701a04b47d8284
+L
+src/hooks/useAnimatedText.ts,d/9/d9f0ffa672ed1314f9b2d557e7c5b4afef50eddf
+S
+#src/app/components/slides/About.tsx,9/d/9d7d31889de02bda6c8fa8d1878350877ce1bfce
+W
+'src/app/components/slides/Education.tsx,4/5/4542b9039b8d8bf04e6f0e02abcddea94c316851
+?
+src/globals.css,2/8/28a07f82a82032fbfa5dcacee3ad77788971cb97
+B
+tailwind.config.js,0/9/0918cbb76f2c44f223706cec9d31a32cd1177ce4
+B
+src/app/layout.tsx,c/f/cfb47de6ae0cae626eed46461300112ef521d977
 @
 src/app/page.tsx,3/3/3393394e21dbac7686e91ad17c5283fb052d67f3
