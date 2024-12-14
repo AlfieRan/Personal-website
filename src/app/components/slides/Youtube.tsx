@@ -54,7 +54,7 @@ export const Youtube = () => (
 export const YoutubeNoLink = () => (
   <div
     className={
-      "flex flex-row w-full justify-center items-center space-x-4 px-4 py-8"
+      "flex flex-row w-full justify-center items-center space-x-4 px-4 py-4 lg:py-8"
     }
   >
     <div

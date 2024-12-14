@@ -1,7 +1,6 @@
 import {
   AboutSlide,
   ContactSlide,
-  EducationSlide,
   ProjectsSlide,
   Tools,
   YoutubeNoLink,
@@ -18,7 +17,6 @@ export default function Home() {
     Tools,
     ProjectsSlide,
     YoutubeNoLink,
-    EducationSlide,
     ContactSlide,
   ];
 
@@ -40,7 +38,6 @@ export default function Home() {
 
             <Tools />
             <YoutubeNoLink />
-            {/* <EducationSlide /> */}
             <ContactSlide />
           </div>
           <div className={"col-span-1 w-full h-full flex flex-col space-y-4"}>
